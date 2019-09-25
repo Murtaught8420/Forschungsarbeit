@@ -1,0 +1,257 @@
+\documentclass[11pt, a4paper,listof=totoc, bibliography=totoc, numbers=noenddot]{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, top=25mm, left=25mm, right=20mm, bottom=25mm, footskip=12mm]{geometry}
+\usepackage{amsmath}
+\usepackage[]{acronym}
+\usepackage{csquotes}
+%\usepackage{cite}
+
+\usepackage[backend=biber, sorting=anyt, maxnames=99, maxcitenames=3, hyperref=true, bibstyle=alphabetic, citestyle=alphabetic]{biblatex}
+\DeclareNameAlias{author}{last-first} 
+\renewcommand*{\multinamedelim}{\addcomma\space}   
+\renewcommand*{\finalnamedelim}{\addsemicolon\space} 
+\renewcommand*{\labelnamepunct}{\addcolon\addspace}
+
+\addbibresource{Struktur/Literaturverzeichnis.bib}
+
+
+
+
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[cm]{sfmath}     %serifenlose Matheumgebung
+%\usepackage[eulergreek]{sansmath}  %andere serifenlose Matheschriftart
+%\sansmath
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+\usepackage{url}
+
+
+\newcommand\tab[1][1,5cm]{\hspace*{#1}}
+\newcommand\halftab[1][0,5cm]{\hspace*{#1}}
+\newcommand\halfsite[1][0.5\textwidth]{\hspace*{#1}}
+\usepackage{graphicx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage{multirow}
+\usepackage{multicol}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\usepackage{booktabs}
+\usepackage{longtable} 
+
+\usepackage{paralist}
+
+\usepackage{subcaption}
+
+
+\usepackage{pdfpages}
+
+
+\usepackage{siunitx}
+\sisetup{detect-weight, detect-family, output-decimal-marker = {,}, per-mode=symbol, bracket-unit-denominator=false}
+\DeclareSIUnit{\mpa}{MPa}
+\DeclareSIUnit{\HV}{HV}
+
+\usepackage{icomma}     % Komma als Trennzeichen statt Punkt (kein Abstand zwischen Ziffern und Komma in Zahl)
+
+
+
+\newcommand{\acrounit}[1]{\acroextra{\makebox[25mm][l]{\si{#1}}}}       % Abstand zwischen Symbol, Einheit und Erklärung im Symbolverzeichnis
+
+\usepackage{nicefrac}
+
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}              % Pagestyle für normale Seiten
+\fancyhf{}
+\lhead{\leftmark}
+\rhead{\thepage}
+\renewcommand\chaptermark[1]{\markboth{\thechapter~\MakeUppercase{#1}}{}}
+\renewcommand{\headrulewidth}{0.4pt}
+\lfoot{}
+\cfoot{Vermessung der Schirmdämpfung von Folien und Schäumen im Fernfeld}
+\rfoot{}
+\renewcommand{\footrulewidth}{0.4pt}
+%\renewcommand*\chapterpagestyle{fancy}
+
+\fancypagestyle{plain}{         % Pagestyle für Chapterseiten
+    \fancyhf{}
+    \rhead{\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \lfoot{}
+    \cfoot{Vermessung der Schirmdämpfung von Folien und Schäumen im Fernfeld}
+    \rfoot{}
+    \renewcommand{\footrulewidth}{0.4pt}}
+
+
+\usepackage{hyphenat}   %Worttrennung festlegen
+
+
+
+
+\usepackage{hyperref}   %Links im Dokument zu Kapiteln, etc. 
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={<Arbeitsname>},
+    pdfauthor=Christoph Peter,
+    bookmarksnumbered=true,
+    hidelinks
+}
+\urlstyle{same}
+
+\usepackage{cleveref}   %sollte letztes eingebundenes Packet sein, weil sonst nicht funktioniert (auf jeden Fall unter hyperref)
+
+
+
+
+%----------------------------------------------------------------------------
+%Komandos für Haupt- und Anhangsverzeichnis
+
+\makeatletter% --> De-TeX-FAQ
+\newcommand*{\maintoc}{% Hauptinhaltsverzeichnis
+  \begingroup
+    \@fileswfalse% kein neues Verzeichnis öffnen
+    \renewcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
+      \value{tocdepth}=-10000 % lokal tocdepth auf sehr kleinen Wert setzen
+    }%
+    \tableofcontents% Verzeichnis ausgeben
+  \endgroup
+}
+\newcommand*{\appendixtoc}{% Anhangsinhaltsverzeichnis
+  \begingroup
+    \edef\@alltocdepth{\the\value{tocdepth}}% tocdepth merken
+    \setcounter{tocdepth}{-10000}% Keine Verzeichniseinträge
+    \renewcommand*{\contentsname}{% Verzeichnisname ändern
+      Anhang}%
+    \renewcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
+      \setcounter{tocdepth}{\@alltocdepth}% tocdepth wiederherstellen
+    }%
+    \protect\KOMAoptions{chapterentrydots}  %Zeilen mit dots auffüllen
+    \tableofcontents% Verzeichnis ausgeben
+    \setcounter{tocdepth}{\@alltocdepth}% tocdepth wiederherstellen
+  \endgroup
+}
+\newcommand*{\appendixattoc}{% Trennanweisung im Inhaltsverzeichnis
+}
+\g@addto@macro\appendix{% \appendix erweitern
+  %\if@openright\cleardoublepage\else\clearpage\fi % Neue Seite
+  \phantomsection  %Befehl für hyperref zum Erstellen eines Ankerpunktes im Anhangsverzeichnis
+  \clearpage 
+  \addcontentsline{toc}{chapter}{\appendixname}% Eintrag ins Hauptverzeichnis
+  \addtocontents{toc}{\protect\appendixattoc}% Trennanweisung in die toc-Datei
+}
+
+\g@addto@macro\appendix{%
+  %\pagenumbering{Roman}%
+  \addtocontents{toc}{\protect\renewcommand*{\protect\@pnumwidth}{1.6em}}%Seitenzahlen im Anhangverzeichnis nicht über Seitenrand hinaus. Problem entstand durch die langen römischen Zahlen. Siehe auch: http://www.komascript.de/node/608
+  % 1 em = Breite eines großem M in der aktuellen Schriftart
+  % Wert für römische Seitenzahlen am besten auf etwa 3.5em setzen; Standardwert für arabische Seitenzahlen im Inhaltverzeichnis: ca. 1.6em
+}
+\makeatother
+
+%----------------------------------------------------------------------------
+%Zeilenskip nach Absätzen
+\newcommand{\linespace}{6pt}
+
+
+%----------------------------------------------------------------------------
+%Counter
+%\newcounter{<Counter>}
+%\renewcommand*\the<Counter>{\arabic{<Counter>}}
+%\setcounter{<Counter>}{1}
+
+
+
+%----------------------------------------------------------------------------
+
+
+
+
+
+\begin{document}
+\sffamily
+
+%----------------------------------------------------------------------------
+%Worttrennungen
+\input{Struktur/Worttrennungen}
+
+%Penalty für Worttrennungen
+\hyphenpenalty=400
+
+
+\pagenumbering{Roman}
+
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.2}   %Abstand der Tabellenzeilen 
+
+
+\include{Struktur/Titelseite}
+
+\onehalfspacing
+
+\includepdf[pages=-, offset= 0cm 0cm, pagecommand={\thispagestyle{empty}}, draft=true]{Struktur/Aufgabenstellung.pdf}
+
+\include{Struktur/Selbststaendigkeitserklaerung}
+
+
+\newpage
+
+%\tableofcontents
+\maintoc                %Hauptverzeichnis anstelle von \tableofcontents
+
+
+\include{Struktur/Abkuerzungsverzeichnis}
+
+
+
+\include{Struktur/Symbolverzeichnis}
+\newpage
+
+
+%\newcounter{savepage}
+%\setcounter{savepage}{\arabic{page}}
+\pagenumbering{arabic}
+
+
+
+\include{Kapitel/Kapitel1}
+
+
+
+\listoffigures
+
+%\sloppy            % Reduzierung der Strafparameter für Zeilenumbruch --> Vermeidung von Zeilen über Rand hinaus
+\listoftables
+%\fussy             % Erhöhung der Strafparameter für Zeilenumbruch auf normalen Wert
+
+
+%\include{Struktur/Literaturverzeichnis}
+
+\nocite{*}         % alle Quellen zitieren, nicht nur die benutzten
+\printbibheading[title=Literaturverzeichnis]
+\printbibliography[heading=subbibliography, notkeyword={Norm}, title={Literatur}]
+
+\printbibliography[heading=subbibliography, keyword={Norm}, title={Normen und Richtlinien}]
+
+%\pagenumbering{Roman}
+%\setcounter{page}{\thesavepage}                %Counter, der römische Seitennummer weiterführt
+
+\appendix                                       
+\appendixtoc                                    %Anhangsverzeichnis
+
+\include{Anhang/Anhang}
+
+\end{document}

@@ -12,7 +12,9 @@
 \renewcommand*{\multinamedelim}{\addcomma\space}   
 \renewcommand*{\finalnamedelim}{\addsemicolon\space} 
 \renewcommand*{\labelnamepunct}{\addcolon\addspace}
-
+%\DeclareFieldFormat{url}{\mkbibbrackets{Online}\addspace\url{#1}}
+\DeclareFieldFormat{url}{URL: \addspace\url{#1}}
+\DeclareFieldFormat{urldate}{\mkbibbrackets{#1}}
 \addbibresource{Struktur/Literaturverzeichnis.bib}
 
 
@@ -229,6 +231,18 @@
 
 \include{Kapitel/Kapitel1}
 
+\include{Kapitel/Kapitel2}
+
+\include{Kapitel/Kapitel3}
+
+\include{Kapitel/Kapitel4}
+
+\include{Kapitel/Kapitel5}
+
+\include{Kapitel/Kapitel6}
+
+\include{Kapitel/Kapitel7}
+
 
 
 \listoffigures
@@ -242,9 +256,11 @@
 
 \nocite{*}         % alle Quellen zitieren, nicht nur die benutzten
 \printbibheading[title=Literaturverzeichnis]
-\printbibliography[heading=subbibliography, notkeyword={Norm}, title={Literatur}]
+\printbibliography[heading=subbibliography, notkeyword={Norm}, notkeyword={Online}, title={Literatur}]
 
 \printbibliography[heading=subbibliography, keyword={Norm}, title={Normen und Richtlinien}]
+
+\printbibliography[heading=subbibliography, keyword={Online}, title={Internetquellen}]
 
 %\pagenumbering{Roman}
 %\setcounter{page}{\thesavepage}                %Counter, der römische Seitennummer weiterführt

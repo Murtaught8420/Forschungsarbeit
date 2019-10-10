@@ -1,0 +1,45 @@
+
+Allgemein beschreibt ein Feld die Gesamtmenge aller Werte einer physikalischen Größe, die allen Punkten eines leeren oder stoffgefüllten Raumes zugeordnet sind, die sogenannte Feldgröße \cite{Spektrum.de_Feld}. Je nach Art der Feldgröße wird der allgemeine Feldbegriff in Skalarfeld 
+
+\begin{equation}
+    a(x,y,z, \ldots)    
+\end{equation}
+
+
+und Vektorfeld 
+
+\begin{equation}
+    \vec A(x,y,z,\ldots)
+\end{equation}
+
+unterteilt. Durch die Darstellung der Abhängigkeit von den Ortskoordinaten des Raumes wird deutlich, dass es sich bei einer Größe um ein Feld handelt. \par
+\vspace{\baselineskip}
+Die im Rahmen dieser Arbeit wichtigen Felder sind das elektrische und das magnetische Feld. Eine Beschreibung des Zusammenhanges zwischen der Feldursache und dem entstehenden Feld lässt sich in beiden Fällen mithilfe der Materialgleichungen und der Maxwell'schen Gleichungen vornehmen. Da sich die Felder jedoch auch ohne Betrachtung der Feldursache beschreiben lassen, wird an dieser Stelle auf die Max'wellschen Gleichungen nicht näher eingegangen \cite{EM_Schirmung}. 
+
+
+\subsection{Elektrisches Feld}\label{cha:2_sub_Elektrisches_Feld}
+
+Um das elektrische Feld mittels seiner Wirkungs zu beschreiben, wird eine Testladung in das Feld eingebracht, auf die daraufhin eine Kraft $\vec F_q(x,y,z,q)$ wirkt. Da die Kraft eine gerichtete Größe ist, muss die Beschreibung des elektrischen Feldes mittels eines Vektorfeldes beschrieben werden. Die Größe der Kraft ist abhängig von der eingebrachten Ladung. Um eine Veränderung des Feldes durch die Testladung auszuschließen, wird stattdessen eine infinitesimale Teilladung $dq$ zur Beschreibung des Feldes verwendet, was sich damit aus
+
+\begin{equation}
+    \vec E (x,y,z) = \frac{d\vec F_q(x,y,z,q)}{dq}
+\end{equation}
+
+ergibt. Der Differentialquotient $\vec E$ ist die elektrische Feldstärke \cite{EM_Schirmung}. \par
+\vspace{\baselineskip}
+Damit ist die Wirkung eines elektrischen Feldes beschrieben, jedoch noch nicht dessen Ursache. Nach dem sogenannten Satz des Hüllenflusses, dem ersten Maxwell'schen Gesetz, erfahren Ladungen nicht nur Beeinflussung durch ein elektrisches Feld, sondern sind auch dessen Ursache. Eine Beschreibung kann am einfachsten mithilfe eines Plattenkondensators erfolgen, dessen Plattenflächen $A_P$ senkrecht auf den Feldlinien eines elektrisches Feldes stehen und auf welche die Ladungen $+q$ und $-q$ genau so aufgebracht werden, dass im Inneren das äußere Feld kompensiert wird. Eine von der Fläche unabhängige Größe zur Beschreibung des elektrischen Feldes lässt sich wiederum durch den Differentielquotienten 
+
+\begin{equation}
+    \vec D(x,y,z) = \frac{dq}{dA_P} \cdot \vec n_A
+\end{equation}
+
+erhalten, der elektrischen Flussdichte $\vec D$ \cite{EM_Schirmung}. \par
+\vspace{\baselineskip}
+
+Da sowohl die Feldstärke als auch die Flussdichte das elektrische Feld beschreiben, gibt es in Abhängigkeit Materials, aus dem der felderfüllte Raum besteht, einen Zusammenhang zwischen beiden Größen, die sogenannte Dielektrizitätszahl oder Permittivität $\varepsilon$, die eine Materialeigenschaft ist. Es gilt
+
+\begin{equation}
+    \vec D = \varepsilon \cdot \vec E = \varepsilon_0 \varepsilon_r \cdot \vec E \qquad \quad \text{mit} \qquad \varepsilon_0 = 8,85419 \cdot 10^{-12} \si{\ampere\second\per\volt\per\meter}
+\end{equation}
+
+mit der Dielektrizitätszahl des leeren Raumes $\varepsilon_0$ und der relativen Dielektrizitätszahl $\varepsilon_r$ des betrachteten Materials \cite{EM_Schirmung}.

@@ -1,0 +1,128 @@
+\chapter{Herleitung der Wellengleichungen ebener, harmonischer Wellen}
+
+Ausgangspunkt für die folgende Herleitung nach~\cite{EM_Schirmung} sind die Maxwell'schen Gleichungen~\cite{Maxwell} für ein isotropes und homogenes Ausbreitungsmedium ohne Raumladungen, sodass sich reine Wirbelfelder ausbilden können. Außerdem sei Linearität und Zeitinvarianz des Mediums vorausgesetzt:
+
+\begin{subequations}
+    \begin{align}
+        \text{rot} \; \vec E &= - \frac{\partial \vec B}{\partial t} = - \mu \frac{\partial  \vec H}{\partial t} \\
+        \text{rot} \; \vec H &= \vec J + \frac{\partial  \vec D}{\partial t} = \sigma \vec E + \varepsilon \frac{\partial  \vec E}{\partial t}
+    \end{align}
+\end{subequations}
+
+%J = elektrische Stromdichte
+Mit der Vektoridentität $\text{rot} \; (\text{rot} \; \vec A) = \text{grad} \; (\text{div} \; \vec A) - \Delta \; \vec A$ \cite{Merzinger} können die Gleichungen entkoppelt werden. Setzt man Quellenfreiheit voraus, d.h. sind nur Wirbelfelder vorhanden, lässt sich sogar schreiben:
+
+\begin{equation}
+    \text{rot} \; (\text{rot} \; \vec A) = - \Delta \; \vec A
+\end{equation}
+
+Damit lassen sich nach der Rotationsbildung 
+
+\begin{subequations}
+    \begin{align}
+        \text{rot} \; (\text{rot} \; \vec E) &= - \text{rot} \; (\mu \frac{\partial  \vec H}{\partial t}) = - \mu \left(\sigma \frac{\partial  \vec E}{\partial t} + \varepsilon \frac{\partial ^2\vec E}{\partial t^2}\right) \\
+        \text{rot} \; (\text{rot} \; \vec H) &= \text{rot} \; (\sigma \vec E + \varepsilon \frac{\partial  \vec E}{\partial t}) = - \sigma \mu \frac{\partial \vec H}{\partial t} - \varepsilon \mu \frac{\partial ^2 \vec H}{\partial t^2} \; ,
+    \end{align}
+\end{subequations}
+
+bei der entsprechend der vorausgesetzten Linearität die dargestellten Vereinfachungen beim Einsetzen der Vektoridentität vorgenommen wurde, die sogenannten Telegraphengleichungen mit der Wellenausbreitungsgeschwindigkeit $v = \frac{1}{\sqrt{\varepsilon \mu}}$ bilden~\cite{EM_Schirmung}:
+
+\begin{subequations}
+    \label{eq:A_Telegraphengleichungen}
+    \begin{align}
+        \Delta \; \vec E(\vec x,t) = \varepsilon \mu \frac{\partial ^2 \vec E}{\partial t^2} + \sigma \varepsilon \frac{\partial  \vec E}{\partial t}  = \frac{1}{v^2} \frac{\partial ^2 \vec E}{\partial t^2} + \sigma \varepsilon \frac{\partial  \vec E}{\partial t} \label{subeq:A_Telegraphengleichungen1}\\
+        \Delta \; \vec H(\vec x,t) = \varepsilon \mu \frac{\partial ^2 \vec H}{\partial t^2} + \sigma \varepsilon \frac{\partial  \vec H}{\partial t} = \frac{1}{v^2} \frac{\partial ^2 \vec H}{\partial t^2} + \sigma \varepsilon \frac{\partial  \vec H}{\partial t}  \label{subeq:A_Telegraphengleichungen2}
+    \end{align}
+\end{subequations}
+
+Im Folgenden lassen sich zwei Fälle unterscheiden. Dies ist zum einen die Ausbreitung in einem nichtleitenden Medium ($\sigma = 0$), wie zum Beispiel Vakuum, und zum anderen der Fall $\sigma \neq 0$. 
+
+\subsubsection{Fall~\uproman{1} ($\sigma = 0$)}
+
+In diesem Fall vereinfachen sich die Telegraphengleichungen~\eqref{eq:A_Telegraphengleichungen} zu hyperbolischen Differentialgleichungen zweiter Ordnung, sogenannte Wellengleichungen. Im homogenen Fall, in dem die Welle nur durch das Medium geleitet und nicht von ihm erzeugt wird, und für drei Raumdimensionen haben die Gleichungen die Form
+
+\begin{equation}
+     \frac{1}{v^2}\frac{\partial ^2 u}{\partial t^2} - \Delta u = \frac{1}{v^2}\frac{\partial ^2 u}{\partial t^2} -  \mathlarger{\mathlarger{\sum}}_{i=1}^3 \frac{\partial^2 u}{\partial x_i^2} = 0   
+\end{equation}
+
+Für die Betrachtung ebener Wellen ist nur eine Raumrichtung relevant. Weiterhin lassen sich allgemeine Lösungen der dreidimensionalen Wellengleichung als Linearkombination ebener Wellen bilden. Hier wird als Ausbreitungsrichtung die Komponente $x_1 = x$ des Koordinatenvektors $\vec x$ genutzt. Man erhält
+
+\begin{equation}
+    \frac{1}{v^2}\frac{\partial^2 u}{\partial t^2} - \frac{\partial^2 u}{\partial x^2} = 0 \; ,
+\end{equation}
+
+was sich für eine mehrfach stetig differenzierbare Funktion $u$ mit dem Satz von Schwarz\footnote{Satz von Schwarz: Für eine $k$-mal stetig partiell differenzierbare Funktion $f : D \subset \mathbb{R}^m \to \mathbb{R}$ mit $m$ Variablen gilt, dass diese ebenfalls $k$-mal stetig total differenzierbar ist und die partiellen Ableitungen jeder Ordnung $j \leq k$ unabhängig von der Reihenfolge der Differentiationen sind~\cite{Vorlesung_Ingenieursmathematik}} zu
+
+\begin{equation}
+    \left(\frac{1}{v} \frac{\partial u}{\partial t} - \frac{\partial u}{\partial x}\right) \cdot \left(\frac{1}{v} \frac{\partial u}{\partial t} + \frac{\partial u}{\partial x}\right) = 0
+\end{equation}
+
+umstellen lässt. \par
+Damit wird die Struktur der Lösung für die allgemeine Funktion $u(x,t)$ 
+
+\begin{equation}
+    u(x,t) = f(x+vt) + g(x-vt)
+\end{equation}
+
+ersichtlich~\cite{Methoden_physikalischer_Mathematik_Band_2}. $f$ und $g$ sind zwei beliebige, zweifach stetig differenzierbare Funktionen, die jeweils einen in positiver x-Richtung und einen in negativer x-Richtung ausbreitenden Wellenanteil beschreiben. Für die weitere Betrachtung ist eine Beschränkung auf eine einseitig ausbreitende Welle (siehe \Abb \ref{subfig:2_Hertzscher_Dipol_B}) ausreichend, da sich dafür die Phänomene wie Dämpfung und Reflektion in gleichem Maße beschreiben lassen~\cite{EM_Schirmung}. Die Integrationskonstante kann ebenfalls vernachlässigt werden, die sie ein Gleichfeld beschreibt, welches für die Betrachtung von Welleneigenschaften nicht von Bedeutung ist~\cite{EM_Schirmung}. Somit lauten die erhaltenen Lösungen der Wellengleichung
+
+\begin{subequations}
+    \begin{align}
+        \vec E = \vec E(x-vt) \\
+        \vec H = \vec H(x-vt)
+    \end{align}
+\end{subequations}
+
+für sich ungedämpft und unverzerrt ausbreitende Wellen. Wie bereits erwähnt können $\vec E$ und $\vec H$ dabei beliebige, zweifach stetig differenzierbare Funktionen sein. Im Fall der harmonischen Anregung mit der Frequenz $f$ bzw. der Kreisfrequenz $\omega = 2\pi f$ ergeben sich gut zu beschreibende Zeitverläufe, mit deren Grundlage sich mittels der Fourier-Transformation in linearen Ausbreitungsmedien beliebige Zeitverläufe beschreiben lassen. \par
+Für die Darstellung ist es zweckmäßig, die Wellenzahl $k = 2\pi / \lambda = \omega \sqrt{\varepsilon \mu}$ einzuführen~\cite{EM_Schirmung}. Damit gilt unter Verwendung der Euler'schen Form $e^{jx} = \cos{x} + j \sin{x}$~\cite{Merzinger}
+\begin{subequations}
+    \begin{align}
+        \vec E(x,t) &= E_0 \cdot e^{j (\omega t - k x)} \vec e_y \\
+        \vec H(x,t) &= H_0 \cdot e^{j (\omega t - k x)} \vec e_z
+    \end{align}
+    \label{eq:A_Wellengleichungen}
+\end{subequations}
+
+für die Feldstärkevektoren in y- bzw. z-Richtung. Im \Abschnitt \ref{cha:2_sub_Feldverlauf_in_Umgebung_eines_Dipols} wurde bereits erläutert, dass in großem Abstand von der Quelle gilt, dass elektrisches und magnetisches Feld jeweils nur noch eine Raumkomponente aufweisen, die außerdem nicht entlang der Ausbreitungsrichtung der Welle ausgerichtet ist.
+
+
+\subsubsection{Fall~\uproman{2} ($\sigma \neq 0$)}
+
+Unter Berücksichtigung der Leitfähigkeit $\sigma$ des Ausbreitungsmediums tritt bei der Ausbreitung der Welle im Raum eine Dämpfung auf. Für die Betrachtung werden wieder die \Gleichungen \eqref{eq:A_Telegraphengleichungen} herangezogen. Wie im Fall~\uproman{1} soll sich die Beschreibung hier auf die Ausbreitung der Welle in einer Raumrichtung mit den Komponenten $E_y$ und $H_z$ orthogonal dazu und auf eine harmonische Anregung beschränken. Unter dieser Voraussetzung lassen sich die \Gleichungen \eqref{eq:A_Telegraphengleichungen} folgendermaßen schreiben~\cite{EM_Schirmung}:
+
+\begin{subequations}
+    \begin{align}
+        \frac{\partial^2 E_y}{\partial x^2} e^{j\omega t} &= \sigma \mu \omega j E_y e^{j \omega t} + \varepsilon \mu (- \omega)^2 E_y e^{j \omega t} \\
+        \frac{\partial^2 H_z}{\partial x^2} e^{j\omega t} &= \sigma \mu \omega j H_z e^{j \omega t} + \varepsilon \mu (- \omega)^2 H_z e^{j \omega t}
+    \end{align}
+\end{subequations}
+
+Für die bessere Darstellung der Lösung kann auch hier die Wellenzahl $k$ 
+
+\begin{equation}
+    k = \sqrt{\varepsilon \mu \omega^2 - j \omega \sigma \mu}
+\end{equation}
+
+eingeführt werden, die jetzt allerdings komplex ist. \par
+In gleicher Weise wie im Fall~\uproman{1} erhält man die Lösung der Diffenrentialgleichung~\cite{Methoden_physikalischer_Mathematik_Band_2} mit der komplexen Wellenzahl $k$:
+
+\begin{subequations}
+    \begin{align}
+        \vec E(x,t) &= E_0 \cdot e^{j (\omega t - k x)} \vec e_y \\
+        \vec H(x,t) &= H_0 \cdot e^{j (\omega t - k x)} \vec e_z \nonumber \\
+                    &= \frac{E_0}{Z} \cdot e^{j (\omega t - k x)} \vec e_y
+    \end{align}
+    \label{eq:A_Wellengleichungen_mit_Leitfaehigkeit}
+\end{subequations}
+
+Der Feldwellenwiderstand $Z$ (siehe \Abschnitt \ref{cha:2_sub_Feldverlauf_in_Umgebung_eines_Dipols}) ist das Verhältnis der Feldvektoren
+
+\begin{equation}
+    Z = \frac{\vec E}{\vec H} = \frac{\mu \omega}{k} = \sqrt{\frac{j \omega \mu}{\sigma + j \omega \varepsilon}}
+\end{equation}
+
+und in diesem Fall ebenfalls komplex.
+
+
+
+

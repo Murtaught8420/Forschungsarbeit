@@ -3,6 +3,9 @@
 %\thispagestyle{fancy}
 \markboth{Symbolverzeichnis}{Symbolverzeichnis}
 
+
+\subsection*{Variablen}
+\vspace{\linespace}
 \textit{Lateinische Symbole} \\[.5\linespace]
 \noindent\rule{\textwidth}{0.5pt}
 \textbf{Symbol} \hspace{12.5mm} \textbf{Einheit} \hspace{10.5mm} \textbf{Bezeichnung} \\[-\linespace]
@@ -10,9 +13,9 @@
 
 \begin{acronym}[Platzhalterwort]
 
-\acro{a}[$a(x,y,z,\ldots)$]{\acrounit{-}Allgemeines Skalarfeld}
+\acro{a}[$a(\vec x,\ldots)$]{\acrounit{-}Allgemeines Skalarfeld}
 \acro{A_P}[$A_P$]{\acrounit{\square\meter}Kondensatorplattenfläche}
-\acro{vec_A}[$\vec A(x,y,z,\ldots)$]{\acrounit{-}Allgemeines Vektorfeld}
+\acro{vec_A}[$\vec A(\vec x,\ldots)$]{\acrounit{-}Allgemeines Vektorfeld}
 
 
 \acro{D}[$\vec D$]{\acrounit{\ampere\second\per\square\meter}Elektrische Flussdichte}
@@ -25,9 +28,7 @@
 
 \acro{q}[$q$]{\acrounit{\ampere\second}Elektrische Ladung}
 
-\acro{x}[$x$]{\acrounit{-}Ortskoordinate im kartesischen Koordinatensystem}
-\acro{y}[$y$]{\acrounit{-}Ortskoordinate im kartesischen Koordinatensystem}
-\acro{z}[$z$]{\acrounit{-}Ortskoordinate im kartesischen Koordinatensystem}
+\acro{x}[$\vec x$]{\acrounit{-}Ortskoordinatenvektor im kartesischen Koordinatensystem}
 
 \end{acronym}
 \newpage
@@ -42,8 +43,36 @@
 \begin{acronym}[Platzhalterwort]
 
 \acro{varepsilon}[$\varepsilon$]{\acrounit{\ampere\second\per\volt\per\meter}Dielektrizitätszahl}
-\acro{varepsilon}[$\varepsilon_0$]{\acrounit{\ampere\second\per\volt\per\meter}Dielektrizitätszahl des leeren Raumes}
 \acro{varepsilon}[$\varepsilon_r$]{\acrounit{1}Relative Dielektrizitätszahl}
+
+\acro{lambda}[$\lambda$]{\acrounit{\meter}Wellenlänge}
 
 
 \end{acronym}
+
+
+\newpage
+
+
+
+\subsection*{Konstanten}
+\noindent\rule{\textwidth}{0.5pt}
+\textbf{Symbol} \hspace{12.5mm} \textbf{Betrag (gerundet)} \hspace{21mm} \textbf{Bezeichnung} \\[-\linespace]
+\noindent\rule{\textwidth}{0.5pt}
+
+
+\renewcommand{\acrounit}[2]{\acroextra{\makebox[55mm][l]{\SI{#1}{#2}}}} 
+
+\begin{acronym}[Platzhalterwort]
+
+\acro{Eulerzahl}[$e$]{\acrounit{2,71828}{}Euler'sche Zahl}
+
+\acro{Feldwellenwiderstand}[$Z_0$]{\acrounit{377}{\ohm}Feldwellenwiderstand des freien Raumes}
+
+\acro{varepsilon}[$\varepsilon_0$]{\acrounit{8,85418e-12}{\ampere\second\per\volt\per\meter}Dielektrizitätszahl des freien Raumes}
+\acro{Pi}[$\pi$]{\acrounit{3,14159}{}Kreiszahl}
+
+
+\end{acronym}
+
+

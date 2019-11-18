@@ -7,14 +7,17 @@
 \usepackage{csquotes}
 %\usepackage{cite}
 
-\usepackage[backend=biber, sorting=anyt, maxnames=99, maxcitenames=3, hyperref=true, bibstyle=alphabetic, citestyle=alphabetic]{biblatex}
+
+\usepackage[backend=biber, sorting=anyt, maxnames=99, maxcitenames=3,sortcites=true, hyperref=true, bibstyle=alphabetic, citestyle=alphabetic]{biblatex}
 \DeclareNameAlias{author}{last-first} 
-\renewcommand*{\multinamedelim}{\addcomma\space}   
+\renewcommand*{\multinamedelim}{\addsemicolon\space}   
 \renewcommand*{\finalnamedelim}{\addsemicolon\space} 
 \renewcommand*{\labelnamepunct}{\addcolon\addspace}
 %\DeclareFieldFormat{url}{\mkbibbrackets{Online}\addspace\url{#1}}
 \DeclareFieldFormat{url}{URL: \addspace\url{#1}}
 \DeclareFieldFormat{urldate}{\mkbibbrackets{#1}}
+\DeclareFieldFormat{edition}{Auflage~{#1}}
+\DeclareFieldFormat{volume}{Band~{#1}}
 \addbibresource{Struktur/Literaturverzeichnis.bib}
 
 
@@ -28,6 +31,8 @@
 %\sansmath
 \usepackage{amssymb}
 \usepackage{amsmath}
+\allowdisplaybreaks % \displaybreak an Stelle von Seitenumbruch
+\usepackage{relsize}
 \usepackage{amsfonts}
 \usepackage{textcomp}
 \usepackage{url}
@@ -50,6 +55,7 @@
 \usepackage{booktabs}
 \usepackage{longtable} 
 
+
 \usepackage{paralist}
 
 \usepackage{subcaption}
@@ -59,8 +65,9 @@
 
 
 \usepackage{siunitx}
-\sisetup{detect-weight, detect-family, output-decimal-marker = {,}, per-mode=symbol, bracket-unit-denominator=false}
+\sisetup{detect-weight, detect-family, output-decimal-marker = {,}, per-mode=symbol, bracket-unit-denominator=false, scientific-notation=false, locale = DE}
 \DeclareSIUnit{\mpa}{MPa}
+\DeclareSIUnit{\Decade}{Dekade}
 \DeclareSIUnit{\HV}{HV}
 
 \usepackage{icomma}     % Komma als Trennzeichen statt Punkt (kein Abstand zwischen Ziffern und Komma in Zahl)
@@ -178,8 +185,20 @@
 \newcommand{\Abschnitte}{Abschnitte~}
 \newcommand{\Abschnitten}{Abschnitten~}
 
+\newcommand{\Anhang}{Anhang~}
+
 \newcommand{\Tabelle}{Tabelle~}
 
+\newcommand{\Gleichung}{Gleichung~}
+\newcommand{\Gleichungen}{Gleichungen~}
+
+
+
+%----------------------------------------------------------------------------
+%Commands für römische Zahlen
+
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+\newcommand{\lowroman}[1]{\romannumeral#1\relax}
 %----------------------------------------------------------------------------
 %Counter
 %\newcounter{<Counter>}
@@ -210,6 +229,7 @@
 \setlength{\parindent}{0pt}
 \renewcommand{\arraystretch}{1.2}   %Abstand der Tabellenzeilen 
 
+\setlength{\jot}{10pt}              %Abstand zwischen Gleichungen in align-Umgebung
 
 \include{Struktur/Titelseite}
 
@@ -256,10 +276,16 @@
 
 
 
+\begingroup
+\renewcommand*{\addvspace}[1]{\vspace*{2.5pt}}
 \listoffigures
+\endgroup
 
 %\sloppy            % Reduzierung der Strafparameter für Zeilenumbruch --> Vermeidung von Zeilen über Rand hinaus
+\begingroup
+\renewcommand*{\addvspace}[1]{\vspace*{2.5pt}}
 \listoftables
+\endgroup
 %\fussy             % Erhöhung der Strafparameter für Zeilenumbruch auf normalen Wert
 
 

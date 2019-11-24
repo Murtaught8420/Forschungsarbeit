@@ -1,0 +1,84 @@
+Wie bereits im vorherigen \Abschnitt \ref{cha:2_Wellenausbreitung} angedeutet, besitzen elektromagnetische Felder in Abhängigkeit ihrer Frequenz unterschiedliche Eigenschaften, welche unterschiedliche Schirmungsmechanismen in Bezug auf die Abmessung der verwendeten Anordnung und der Art des Feldes notwendig machen. Da die Messungen im Rahmen dieser Arbeit im Fernfeld einer Antenne stattfinden sollen und auch der zu nutzende Freqeunzbereich mit $1\ldots$\SI{18}{\giga\hertz} deutlich über der Grenze von \SI{30}{\mega\hertz} liegt, ab der man nach~\cite{Design_of_shielded_enclosures} von der Ausbreitung ebener Wellen unabhängig von der Antennenbauart ausgegehen kann, soll sich die Betrachtung von Schirmungsmethoden auf das sogenannte elektromagnetische Wellenfeld beschränkten. Dies deckt sich mit der Einteilung elektromagnetischer Felder nach~\cite{Feldtheorie_Begriffe} und dem Richtwert für die Anwendung der Schirmungsmechanismen für Wellenfelder nach~\cite{EM_Schirmung}
+
+\begin{equation}
+    f > \frac{c_0}{d}
+\end{equation}
+
+mit einer Schirmabmessung $d$ im Bereich von \SI{1}{\meter} und Frequenzen $f$ im Bereich von $1\ldots$\SI{18}{\giga\hertz}.
+
+%Induktion als charakteristisches Merkmal in diesem Anwednungsbreich
+
+
+
+\subsection{Begriffe der Schirmdämpfung}\label{cha:2_sub_Begriff_der_Schirmdaempfung}
+
+Um im Weiteren eine einheitliche Begriffsgrundlage vorauszusetzen, soll an dieser Stelle kurz auf die relevanten Begriffe der elektromagnetischen Strahlung und Schirmung eingegangen werden. Außerdem soll unter anderem die im Folgenden angewandte Konvention zur Darstellung von Bezugsgrößen logarithmierter Verhältnisse von Größen kurz eingeführt werden. 
+
+\subsubsection{Pegelmaße}
+
+Generell wird für die Darstellung von Verhältnissen elektrischer und magentischer Feldgrößen gern auf logarithmische Verhältnisse, sogenannte Pegel in Dezibel zurückgegriffen, was nicht nur den Vorteil eines großen Dynamikbereiches in der Darstellung hat, sondern auch verschiedene Rechnungen erleichtert. Unterschieden wird dabei zwischen relativen und bezogenen Pegeln. Relative Pegel, auch als Übertragungsmaße bezeichnet, stellen die Verhältnisse zweier Größen dar und dienen damit der Charakterisierung von Dämpfungen oder dem Ausdruck von Antennengewinnen. Für Feldgrößen $E$ ist der relative Pegel anders definiert~\cite{EM_Schirmung}
+
+\begin{equation}
+    E \si{\Dezibel} = 20 \cdot \log_{10} \left( \frac{E_1}{E_2} \right) = 20 \cdot \lg \left( \frac{E_1}{E_2} \right)
+\end{equation}
+
+als für Leistungen $P$
+
+\begin{equation}
+    P \si{\Dezibel} = 10 \cdot \lg \left( \frac{P_1}{P_2} \right) \; .
+\end{equation}
+
+Dies hat den Vorteil, dass bei der Rechnung mit Pegeln nicht auf die Art des vorliegenden Verhältnisses geachtet werden muss. Für ein intuitiveres Verständnis der Bedeutung bestimmter Pegel für das reale Großenverhältnis zweier Feldgrößen bzw. Leistungen sind in der \Tabelle\ref{tab:2_Relative_Pegel} gängige Pegel beispielhaft dargestellt.
+
+\begin{table}
+\centering
+\caption{Verschiedene relative Pegel mit zugehörigen Verhältnissen von Feldgrößen und Leistungen}
+\begin{tabular}{c c c}
+    \toprule
+    Relativer Pegel $\left[\si{\Dezibel}\right]$ & Verhältnis von Feldgrößen & Verhältnis von Leistungen \\
+    \midrule
+    3   &   1,412   &   1,995   \\
+    6   &   1,995   &   3,981   \\
+    10  &   3,162   &   10      \\
+    40  &   100     &   10.000  \\
+    60  &   1000    &   1.000.000 \\
+    80  &   10.000  &   $10^8$  \\
+    100 &   100.000  &   $10^{10}$ \\
+    \bottomrule
+\end{tabular}
+\label{tab:2_Relative_Pegel}
+\end{table}
+
+Bezogene Pegel beschreiben im Gegensatz dazu Absolutwerte einer Größe in Bezug auf einen Referenzwert, beispielsweise einen ungestörten Raumpunkt. Um wieder auf den ursprünglichen Wert der Größe schließen zu können, ist eine Angabe der Bezuggröße notwendig. Diese soll nach~\cite{IEC60027-3} wie folgt erfolgen: 
+
+\begin{equation}
+    P_{1 \si{\milli\watt}} = 10 \cdot \lg \left( \frac{P_1}{1 \si{\milli\watt}}\right) \si{\Dezibel} \; .
+\end{equation}
+
+Auf eine Kennzeichnung des Bezuges an der Einheit $\si{\Dezibel}$ soll ausdrücklich verzichtet werden, obwohl dies in der Literatur die vorherrschende Schreibweise ist. Für diese Arbeit soll jedoch die nach~\cite{IEC60027-3} korrekte Schreibweise $P_{1 \si{\milli\watt}} = 3 \si{\Dezibel}$ angewandt werden. 
+
+
+\subsubsection{Schirmdämpfung}
+
+Ein Schirm wird im Allgemeinen im Rahmen elektromagnetischer Anwendung dazu eingesetzt, Feldstärken im einem bestimmten Bereich innerhalb oder außerhalb des Schirms zu dämpfen. Nach dem Reziprozitätsgesetz ist es bei gleicher Feldverteilung, auch wenn diese in der Praxis oft nur bedingt gegeben ist~\cite{EMV-gerechtes_Geraetedesign}, dabei unerheblich, ob sich die Quelle des Feldes innerhalb oder außerhalb der Schirmgrenzen befindet~\cite{EM_Schirmung}. Die Schirmwirkung lässt sich mit dem Schirmfaktor $Q$, der die Feldstärke an einem Raumpunkt nach der Anwendung des Schirms (Index \glqq$1$\grqq) zur Feldstärke ohne Schirm (Index \glqq$0$\grqq) in Verhältnis setzt
+
+\begin{align}
+    Q_e = \frac{E_1}{E_0} \; \text{,}
+\end{align}
+
+beurteilen~\cite{EM_Schirmung}.
+\par
+\vspace{\linespace}
+Die im Allgemeinen verursachte Phasenverschiebung durch den Schirm, macht $Q$ zu einer komplexen Größe~\cite{EM_Schirmung}. Da in den meisten Fällen jedoch vor allem der Betrag von Interesse ist, wird die Schirmdämpfung $a_s$ als Pegelmaß der Feldgrößenbeträge definiert:
+
+\begin{align}
+    a_e &= 20 \cdot \lg \left(\frac{\abs{E_0}}{\abs{E_1}}\right) = 20 \cdot \lg \frac{1}{\abs{Q_e}} \\
+    a_m &= 20 \cdot \lg \left(\frac{\abs{H_0}}{\abs{H_1}}\right) = 20 \cdot \lg \frac{1}{\abs{Q_m}} \\
+    a_s &= 10 \cdot \lg \left(\frac{\abs{P_0}}{\abs{P_1}}\right) \; \text{.}
+\end{align}
+
+Die Schirmdämpfung in Dezibel wird für ausgedehnte Schirme, aufgrund der teilweise starken Schwankungen zwischen einzelnen Raumpunkten hinsichtlich Feldverteilung und Frequenzen, nur als minimal erreichte Schirmdämpfung angegeben, da nur dieser Wert bspw. zur Charakterisierung der Schirmwirkung eines Gehäuses sinnvoll ist~\cite{EM_Schirmung}. Da nach der Definition der Schirmdämpfung die Feldgrößen einmal mit und einmal in Abwesenheit eines Schirmes gemessen werden muss und dies nicht zeitgleich erfolgen kann, bezeichnet man die Bestimmung der Schirmwirkung auch als Einfügungsmessung, da der Schirm im Verlauf der Messung zwischen Sende- und Empfangseinrichtung eingefügt wird. Auf die unterschiedlichen Messmethoden wird im \Abschnitt\ref{cha:2_Methoden_der_Schirmdaempfungsmessung} genauer eingegangen.
+
+
+\subsection{Schirmung ebener Wellenfelder}
+

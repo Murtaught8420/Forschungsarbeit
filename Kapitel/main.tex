@@ -12,10 +12,10 @@
 %\usepackage{cite}
 
 
-\usepackage[backend=biber, sorting=anyt, maxnames=99, maxcitenames=3,sortcites=true, hyperref=true, bibstyle=alphabetic, citestyle=alphabetic]{biblatex}
+\usepackage[backend=biber, sorting=anyt, maxnames=99, maxcitenames=3, sortcites=true, hyperref=true, bibstyle=alphabetic, citestyle=alphabetic]{biblatex}
 \DeclareNameAlias{author}{last-first} 
 \renewcommand*{\multinamedelim}{\addsemicolon\space}   
-\renewcommand*{\finalnamedelim}{\addsemicolon\space} 
+\renewcommand*{\finalnamedelim}{\addsemicolon\space}
 \renewcommand*{\labelnamepunct}{\addcolon\addspace}
 %\DeclareFieldFormat{url}{\mkbibbrackets{Online}\addspace\url{#1}}
 \DeclareFieldFormat{url}{URL: \addspace\url{#1}}
@@ -129,6 +129,7 @@
 }
 \urlstyle{same}
 
+\usepackage{nameref}
 \usepackage{cleveref}   %sollte letztes eingebundenes Packet sein, weil sonst nicht funktioniert (auf jeden Fall unter hyperref)
 
 
@@ -183,6 +184,11 @@
 %Zeilenskip nach Absätzen
 \newcommand{\linespace}{6pt}
 
+%Stretch von Tabellen
+\newcommand{\tablestretch}{1.3}
+
+%Skip nach Tabellencaption
+\newcommand{\tablespace}{8pt}
 
 %----------------------------------------------------------------------------
 %Commands für unterschiedliche Schreibweisen von Referenzen
@@ -243,7 +249,7 @@
 
 \onehalfspacing
 
-\includepdf[pages=-, offset= 0cm 0cm, pagecommand={\thispagestyle{empty}}, draft=true]{Struktur/Aufgabenstellung.pdf}
+\includepdf[pages=-, offset= 0cm 0cm, pagecommand={\thispagestyle{empty}}, draft=false]{Struktur/Aufgabenstellung.pdf}
 
 \include{Struktur/Selbststaendigkeitserklaerung}
 

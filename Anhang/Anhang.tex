@@ -5,7 +5,16 @@
 %\includepdf[pages=2, scale=1, offset= 0cm 0cm, clip, trim= 0cm 0cm 0cm 0cm, pagecommand={\thispagestyle{empty}\chapter{<chapter>}]{<Dateiname>.pdf}
 %trim: left bottom right top
 
-\input{Anhang/Herleitung_Wellengleichung.tex}\label{Anhang:Herleitung_Wellengleichung}
+\input{Anhang/Herleitung_Wellengleichung.tex}
+
+\RedeclareSectionCommand[beforeskip=-\topskip]{chapter}
+
+
+\includepdf[pages = 1, scale = 0.8, offset = 0cm -2cm, pagecommand={\thispagestyle{empty}\chapter{Nomogramm zur Bestimmung der Reflektionsdämpfung ebener Wellen}\label{Anhang:Nomogramm_Reflektionsdaempfung}\input{Anhang/Nomogramm_Reflektionsdaempfung.tex}}]{Anhang/Nomogramm_Reflektionsdaempfung.pdf}
+
+
+\includepdf[pages = 1, scale = 0.8, offset = 0cm -2cm, pagecommand={\thispagestyle{empty}\chapter{Nomogramm zur Bestimmung der Absorptionsverluste in Schirmen}\label{Anhang:Nomogramm_Absorptionsverlust}\input{Anhang/Nomogramm_Absorptionsverlust.tex}}]{Anhang/Nomogramm_Absorptionsverlust.pdf}
+
 
 \RedeclareSectionCommand[beforeskip=-\topskip]{chapter}     %weniger Whitesapce über der Kapitelüberschrift
 

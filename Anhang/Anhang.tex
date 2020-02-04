@@ -7,7 +7,7 @@
 
 \input{Anhang/Herleitung_Wellengleichung.tex}
 
-\RedeclareSectionCommand[beforeskip=-\topskip]{chapter}
+\RedeclareSectionCommand[beforeskip=-\topskip]{chapter}  %weniger Whitesapce über der Kapitelüberschrift
 
 
 \includepdf[pages = 1, scale = 0.8, offset = 0cm -2cm, pagecommand={\thispagestyle{empty}\chapter{Nomogramm zur Bestimmung der Reflektionsdämpfung ebener Wellen}\label{Anhang:Nomogramm_Reflektionsdaempfung}\input{Anhang/Nomogramm_Reflektionsdaempfung.tex}}]{Anhang/Nomogramm_Reflektionsdaempfung.pdf}
@@ -16,7 +16,22 @@
 \includepdf[pages = 1, scale = 0.8, offset = 0cm -2cm, pagecommand={\thispagestyle{empty}\chapter{Nomogramm zur Bestimmung der Absorptionsverluste in Schirmen}\label{Anhang:Nomogramm_Absorptionsverlust}\input{Anhang/Nomogramm_Absorptionsverlust.tex}}]{Anhang/Nomogramm_Absorptionsverlust.pdf}
 
 
-\RedeclareSectionCommand[beforeskip=-\topskip]{chapter}     %weniger Whitesapce über der Kapitelüberschrift
+\RedeclareSectionCommand{chapter}    
+
+\thispagestyle{fancy}
+
+\input{Anhang/Anforderungsliste.tex}
+
+
+
+\includepdf[pages = {4}, scale = .92, offset = 0cm -2cm, trim=0cm 2cm 0cm 0cm, clip, pagecommand=\thispagestyle{empty}\chapter{Datenblatt VNA (Auszug)}\label{A:Datenblatt_VNA}]{Anhang/Datenblatt_VNA.pdf}
+\includepdf[pages = {6,14,15}, scale = .92, offset = 0cm 0cm, trim=0cm 2cm 0cm 0cm, clip, pagecommand=\thispagestyle{fancy}]{Anhang/Datenblatt_VNA.pdf}
+
+
+
+\includepdf[pages = {1}, scale = .75, offset = 0cm -1cm, trim=0.5cm 3cm 1cm 0.5cm, clip, pagecommand=\thispagestyle{empty}\chapter{Datenblatt Hornstrahler (Auszug)}\label{A:Datenblatt_Antennen}]{Anhang/Datenblatt_Antennen.pdf}
+\includepdf[pages = {4,5}, scale = .75, offset = 0cm 0cm, trim=0.5cm 3cm 1cm 0.5cm, clip, pagecommand=\thispagestyle{fancy}]{Anhang/Datenblatt_Antennen.pdf}
+
 
 
 

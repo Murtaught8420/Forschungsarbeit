@@ -12,16 +12,17 @@
 %\usepackage{cite}
 
 
-\usepackage[backend=biber, sorting=anyt, maxnames=99, maxcitenames=3, sortcites=true, hyperref=true, bibstyle=alphabetic, citestyle=alphabetic]{biblatex}
+\usepackage[backend=biber, sorting=anyt, maxnames=99, maxcitenames=3, sortcites=true, hyperref=true, bibstyle=numeric, citestyle=numeric]{biblatex}
 \DeclareNameAlias{author}{last-first} 
 \renewcommand*{\multinamedelim}{\addsemicolon\space}   
 \renewcommand*{\finalnamedelim}{\addsemicolon\space}
 \renewcommand*{\labelnamepunct}{\addcolon\addspace}
 %\DeclareFieldFormat{url}{\mkbibbrackets{Online}\addspace\url{#1}}
-\DeclareFieldFormat{url}{URL: \addspace\url{#1}}
+\DeclareFieldFormat{url}{URL:\addspace\url{#1}}
 \DeclareFieldFormat{urldate}{\mkbibbrackets{#1}}
 \DeclareFieldFormat{edition}{Auflage~{#1}}
 \DeclareFieldFormat{volume}{Band~{#1}}
+\DeclareFieldFormat{doi}{DOI:~{#1}}
 \addbibresource{Struktur/Literaturverzeichnis.bib}
 
 
@@ -50,7 +51,7 @@
 \newcommand\halfsite[1][0.5\textwidth]{\hspace*{#1}}
 \usepackage{graphicx}
 \usepackage[onehalfspacing]{setspace}
-\usepackage{wrapfig}
+\usepackage{flafter} %Bild erst nach Erwähnung im Text einfügen
 \usepackage{float}
 \usepackage{array}
 \usepackage{tabularx}
@@ -195,6 +196,8 @@
 
 \newcommand{\Abb}{Abbildung~}
 
+\newcommand{\Kapitel}{Kapitel~}
+
 \newcommand{\Abschnitt}{Abschnitt~}
 \newcommand{\Abschnitts}{Abschnitts~}
 \newcommand{\Abschnitte}{Abschnitte~}
@@ -206,6 +209,8 @@
 
 \newcommand{\Gleichung}{Gleichung~}
 \newcommand{\Gleichungen}{Gleichungen~}
+
+\newcommand{\Firma}[1]{#1}
 
 
 
@@ -220,6 +225,12 @@
 %\renewcommand*\the<Counter>{\arabic{<Counter>}}
 %\setcounter{<Counter>}{1}
 
+\newcounter{Kat}
+\renewcommand*\theKat{\arabic{Kat}}
+\setcounter{Kat}{1}
+\newcounter{ID}
+\renewcommand*\theID{\arabic{ID}}
+\setcounter{ID}{1}
 
 
 %----------------------------------------------------------------------------
@@ -236,7 +247,10 @@
 \input{Struktur/Worttrennungen}
 
 %Penalty für Worttrennungen
-\hyphenpenalty=400
+\global\hyphenpenalty=500
+
+%Toleranz für ungleichmäßige Lücken zwischen Wörtern beim Erreichen des Blocksatzes
+%\tolerance=400
 
 
 \pagenumbering{Roman}
@@ -285,9 +299,6 @@
 
 \include{Kapitel/Kapitel5}
 
-\include{Kapitel/Kapitel6}
-
-\include{Kapitel/Kapitel7}
 
 
 
@@ -306,13 +317,15 @@
 
 %\include{Struktur/Literaturverzeichnis}
 
-\nocite{*}         % alle Quellen zitieren, nicht nur die benutzten
-\printbibheading[title=Literaturverzeichnis]
-\printbibliography[heading=subbibliography, notkeyword={Norm}, notkeyword={Online}, title={Literatur}]
+%\nocite{*}         % alle Quellen zitieren, nicht nur die benutzten
+%\printbibheading[title=Literaturverzeichnis]
+\printbibliography[title = {Literaturverzeichnis}]
 
-\printbibliography[heading=subbibliography, keyword={Norm}, title={Normen und Richtlinien}]
+%\printbibliography[heading=subbibliography, notkeyword={Norm}, notkeyword={Online}, title={Literatur}]
 
-\printbibliography[heading=subbibliography, keyword={Online}, title={Internetquellen}]
+%\printbibliography[heading=subbibliography, keyword={Norm}, title={Normen und Richtlinien}]
+
+%\printbibliography[heading=subbibliography, keyword={Online}, title={Internetquellen}]
 
 %\pagenumbering{Roman}
 %\setcounter{page}{\thesavepage}                %Counter, der römische Seitennummer weiterführt

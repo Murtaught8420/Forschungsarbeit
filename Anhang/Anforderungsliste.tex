@@ -27,89 +27,143 @@
     \multicolumn{3}{l}{\textbf{Geometrie}} \\
     \midrule
     \theKat.\theID  & F     & Maße:               \newline
-                                \noindent\hspace*{4mm} - Länge: $\leq$ \SI{1500}{\milli\meter} \newline
-                                \noindent\hspace*{4mm} - Breite: $\leq$ \SI{300}{\milli\meter} \newline
-                                \noindent\hspace*{4mm} - Höhe:~~$\leq$ \SI{200}{\milli\meter}        \stepcounter{ID} \\ 
+                                \noindent\hspace*{4mm} - Länge: $\approx$ \SI{2000}{\milli\meter} (vgl. Abschätzungen in \Kapitel\ref{cha:3}) \newline
+                                \noindent\hspace*{4mm} - Breite: $\approx$ \SI{1500}{\milli\meter} \newline
+                                \noindent\hspace*{4mm} - Höhe:~~$\approx$ \SI{1500}{\milli\meter}        \stepcounter{ID} \\ 
     \theKat.\theID  & F     & Maße der Prüfkörper (Folien und Schäume): \newline
-                                \noindent\hspace*{4mm} - \SI{100}{\milli\meter}$\; \times \;$\SI{100}{\milli\meter} \newline
+                                \noindent\hspace*{4mm} - \SI{120}{\milli\meter}$\; \times \;$\SI{120}{\milli\meter}; Messausschnitt: \SI{100}{\milli\meter}$\; \times \;$\SI{100}{\milli\meter} \newline
                                 \noindent\hspace*{4mm} - Folienstärke: $\leq$ \SI{2}{\milli\meter} \newline
-                                \noindent\hspace*{4mm} - Schaumstärke: $\leq$ \SI{15}{\milli\meter} \stepcounter{ID} \\
+                                \noindent\hspace*{4mm} - Schaumstärke: $\leq$ \SI{12}{\milli\meter} \stepcounter{ID} \\
     \theKat.\theID  & W     & Test unterschiedlicher Prüfkörperstärken mit gleicher Halterung \stepcounter{ID} \\
     \midrule
     \multicolumn{3}{l}{\textbf{Kinematik}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
-    \theKat.\theID  & F     & Exakte Positionierung der Prüfkörper im Versuchsstand                 \stepcounter{ID} \\ 
+    \theKat.\theID  & F     & Positionierung der Prüfkörper im Versuchsstand    \newline
+                                \noindent\hspace*{4mm} - Positionsabweichung in Höhe und Tiefe des Versuchsstandes: \SI{\pm1}{\centi\meter}  \newline
+                                \noindent\hspace*{4mm} - Positionsabweichung zwischen Antennen: \SI{\pm1}{\centi\meter}  \stepcounter{ID} \\ 
+    \theKat.\theID  & F     & Positionierung der Antennen im Versuchsstand \newline
+                                \noindent\hspace*{4mm} - Positionsabweichung in Höhe und Tiefe des Versuchsstandes: \SI{\pm1}{\centi\meter} \stepcounter{ID} \\
+    \theKat.\theID  & F     & Ebenheit des Reflektors \newline 
+                                \noindent\hspace*{4mm} - Winkelabweichung des Reflektors orthogonal zur Senderichtung: \SI{2}{\degree} \stepcounter{ID} \\
+    \theKat.\theID  & W     & Versuchsstand rollbar für bessere Umpositionierung im Labor \stepcounter{ID} \\
 
     \midrule
     \multicolumn{3}{l}{\textbf{Festigkeit}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
 
+    \theKat.\theID  & F     & Keine plastische Verformung der gewichtstragenden Bauteile    \stepcounter{ID} \\
+    \theKat.\theID  & W     & Geringe elastische Verformung bei Betreten des Versuchsstandes für Montage und Anpassungen \stepcounter{ID} \\
+    \theKat.\theID  & F     & Geringe elastische Verformung der Durchführungsverschlüssse (Türblätter) bei Schließen gegen verwendete HF-Dichtungen \stepcounter{ID} \\
+    \theKat.\theID  & F     & Verformung der verwendeten HF-Dichtungen bei sachgemäßem Verschluss \newline
+                                    \noindent\hspace*{4mm} - zwischen \SI{25}{\percent} und \SI{50}{\percent} der Ausgangshöhe~\cite{Holland_Shielding_Absorber} \stepcounter{ID} \\
+                                    
+
     \midrule
     \multicolumn{3}{l}{\textbf{Energie}} \stepcounter{Kat} \setcounter{ID}{1} \\
     \midrule
+
+    \theKat.\theID  & F     & Auslegung und Auswahl aller Komponenten für Wellenfelder zwischen \SI{1}{\giga\hertz} und \SI{18}{\giga\hertz} lt. Aufgabenstellung                                                           \stepcounter{ID} \\
+    \theKat.\theID  & F     & Ableiten auftretender Störströme an Kabeldurchführungen \stepcounter{ID} \\
+    \theKat.\theID  & F     & Verbindung der Schirmhülle mit Gebäudemasse~\cite{EMV, EMV-gerechtes_Geraetedesign} \stepcounter{ID} \\
 
     \midrule
     \multicolumn{3}{l}{\textbf{Kräfte}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
 
+    \theKat.\theID  & F     & Aufbringen der benötigten Kräfte zum sicheren Verschließen der Durchführungen gegen verwendeten HF-Dichtungen \newline
+                                    \noindent\hspace*{4mm} - 150-\SI{250}{\newton\per\meter} für Fingerkontaktstreifen~\cite{Holland_Shielding_Absorber} \stepcounter{ID} \\
+    \theKat.\theID  & F     & Aufbringen benötigter Kräfte zum sicheren Verbinden aller Komponenten untereinander hintsichtlich mechanischer Belastung und Schirmung elektromagnetischer Wellen (vgl. auch Anforderung~6.3) \stepcounter{ID} \\
+
     \midrule
     \multicolumn{3}{l}{\textbf{Stoffe}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
         
+    \theKat.\theID  & F     & Verwendung metallischer Schirmhülle zum Gewährleisten hoher Leitfähigkeit (vgl. \Abschnitt\ref{cha:2_sub_Daempfung_und_Absorption},~\ref{cha:2_sub_Reflektion}~\ref{cha:2_sub_Schirmung_ebener_Wellenfelder}) \stepcounter{ID} \\ 
+    \theKat.\theID  & F     & Schirmdicke zur Gewährleistung von mindestens \SI{100}{\Dezibel} Schirmungseffektivität (vgl. \Gleichung\eqref{eq:2_Schirmungseffektivitaet}) ohne Durchführungen \stepcounter{ID} \\
+    \theKat.\theID  & F     & Gewährleisten einer leitfähigen Verbindung aller Komponenten der Schirmhülle untereinander (vgl. \Abschnitt\ref{cha:2_sub_Schirmung_ebener_Wellenfelder}) \stepcounter{ID} \\
+    \theKat.\theID  & F     & Verbindung der Kabelschirme mit der äußeren Schirmhülle oder Trennung äußerer und innerer Signalekabel durch Konnektoren~\cite{EMV}                                                \stepcounter{ID} \\     
+    \theKat.\theID  & W     & Materialauswahl zur Vermeidung von Kontaktkorrosion an Verbindungsstellen unterschiedlicher Materialien \stepcounter{ID} \\
+        
     \midrule
     \multicolumn{3}{l}{\textbf{Signale}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
+    
+    \theKat.\theID  & F     & Eingangssignal: Messsignal VNA 1-\SI{18}{\giga\hertz} \newline
+                              Ausgangssignal: empfangenes Messsignal nach Schirmdurchgang \stepcounter{ID} \\
+    \theKat.\theID  & F     & Auswahl aller Komponenten der Signalübertragung mit gleicher Impedanz \newline
+                                \noindent\hspace*{4mm} - \SI{50}{\ohm} entsprechend des vorhandenen Messsystems~\cite{VNA-Datenblatt} \stepcounter{ID} \\
+    \theKat.\theID  & F     & Schirmungseffektivität gegenüber äußeren Störungen unter Beachtung von Durchführungen und Kabelverbindungen \SI{\geq 60}{\Dezibel}                                         \stepcounter{ID} \\
+    \theKat.\theID  & W     & Möglichst geringes VSWR aller verwendeten Komponenten\footnote{Bei Anpassung bzw. Kalibration der Messtechnik auf die verwendeten Komponenten nur von geringer Bedeutung~\cite{}} \stepcounter{ID} \\ 
 
     \midrule
     \multicolumn{3}{l}{\textbf{Sicherheit}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
 
+    \theKat.\theID  & F     & Verringerung des möglichen Bedienrisikos  \stepcounter{ID} \\
+    \theKat.\theID  & W     & Verringerung des Risikos der plastischen Verformung verwendeter HF-Dichtungen durch unsachgemäßes Schließen \stepcounter{ID} \\ 
+
     \midrule
     \multicolumn{3}{l}{\textbf{Ergonomie}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
+    
+    \theKat.\theID  & F     & Bedienung per Hand: Probenzufuhr, Starten und Beenden von Messungen, Verschluss von Durchführungen \stepcounter{ID} \\
+    \theKat.\theID  & W     & Einbringen von Proben mit möglichst wenigen Handgriffen \stepcounter{ID} \\
+    \theKat.\theID  & W     & Messung in zwei unterschiedlichen Polaritäten / Probenorientierungen mit möglichst wenigen Handgriffen \stepcounter{ID} \\
+    \theKat.\theID  & W     & Erreichbarkeit von Sende- und Empfangsantenne durch je eine Durchführung \stepcounter{ID} \\ 
 
     \midrule
     \multicolumn{3}{l}{\textbf{Fertigung}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
     \theKat.\theID  & F     & Fertigung des Versuchsstandes als Einzelstück                         \stepcounter{ID} \\
-    \theKat.\theID  & F     & Berücksichtigung der Einschränkungen der Fertigungsstätte hinsichtlich Fertigungsverfahrung, Abmessungen und Materialien \stepcounter{ID} \\
-    \theKat.\theID  & W     & Geringe Herstellungskosten                                            \stepcounter{ID} \\
-    \theKat.\theID  & W     & Geringer Fertigungsaufwand                                            \stepcounter{ID} \\
+    \theKat.\theID  & F     & Berücksichtigung der Einschränkungen der Fertigungsstätte hinsichtlich Fertigungsverfahrung, Abmessungen und Materialien                                                   \stepcounter{ID} \\
+    \theKat.\theID  & W     & Reduzierung des Einflusses von Fertigungstoleranzen auf die Schirmungseffektivität der Schirmhülle \stepcounter{ID} \\
+    \theKat.\theID  & W     & Möglichst geringe Herstellungskosten                                            \stepcounter{ID} \\
+    \theKat.\theID  & W     & Möglichst geringer Fertigungsaufwand                                            \stepcounter{ID} \\
     \midrule
     \multicolumn{3}{l}{\textbf{Montage}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
     \theKat.\theID  & F     & Berücksichtigung der Montagebestimmungen für Kaufteile und Verbindungs\-elemente \stepcounter{ID} \\
-    \theKat.\theID  & W     & Gesamtmontage aller Fertigungs- und Kaufteile vor Ort                 \stepcounter{ID} \\
+    \theKat.\theID  & W     & Gesamtmontage des Versuchsstandes vor Ort                 \stepcounter{ID} \\
     \midrule
     \multicolumn{3}{l}{\textbf{Kontrolle}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
-
+    \theKat.\theID  & F     & Abschluss von einzelnen Arbeitsschritten des Aufbaus durch entsprechende Kontrolle \stepcounter{ID} \\
     \midrule
     \multicolumn{3}{l}{\textbf{Gebrauch}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
-    \theKat.\theID  & F     & Betrieb des Versuchsstandes ausschließlich über die vorhandenen Schnittstellen und nach erfolgter Einweisung \stepcounter{ID} \\
-    \theKat.\theID  & W     & Geringe Handhabungszeit                                               \stepcounter{ID} \\
+    \theKat.\theID  & F     & Betrieb des Versuchsstandes ausschließlich über die vorhandenen Schnittstellen \stepcounter{ID} \\
+    \theKat.\theID  & F     & Verwendung geeigneter Kalibrierung der verwendeten Messtechnik vor jeder Messung \stepcounter{ID} \\
+    \theKat.\theID  & W     & Verminderung des Risikos falschen Gebrauches durch entsprechende geometrische / funktionale Gestaltung                                                                     \stepcounter{ID} \\
+    \theKat.\theID  & W     & Möglichkeit der Konfigurationsänderung der Absorberelemente für zukünftige Untersuchungen \stepcounter{ID} \\
+    
     \midrule
     \multicolumn{3}{l}{\textbf{Instandhaltung}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
+    
+    \theKat.\theID  & F     & Visuelle Kontrolle verwendeter HF-Dichtungen hinsichtlich Verformung und Verschmutzung vor jeder Verwendung \stepcounter{ID} \\ 
+    \theKat.\theID  & F     & Visuelle Kontrolle der Absorberelemente auf Beschädigungen vor jeder Verwendung \stepcounter{ID} \\
+    \theKat.\theID  & F     & Visuelle Kontrolle der Schirmhülle des Versuchsstandes in regelmäßigen Abständen \stepcounter{ID} \\
+    \theKat.\theID  & W     & Verwendung möglichst wartungsarmer Systeme \stepcounter{ID} \\
 
     \midrule
     \multicolumn{3}{l}{\textbf{Kosten}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
-    \theKat.\theID  & F     & Budget: \newline
-                                \noindent\hspace*{4mm} - Versuchsstand ohne Probekörper: 2500€ \newline
-                                \noindent\hspace*{4mm} - Probekörper: 5000€                         \stepcounter{ID} \\
+    
+    \theKat.\theID  & F     & Budget des Versuchsstandes: \SI{10000}{\text{\euro}}                        \stepcounter{ID} \\
     \theKat.\theID  & W     & Einsatz vorhandener Sensorsysteme nach Möglichkeit                    \stepcounter{ID} \\
-    \theKat.\theID  & W     & Wirtschaftliche Gestaltung und Versuchsplanung \stepcounter{ID} \\
+    \theKat.\theID  & W     & Wirtschaftliche Gestaltung und Komponentenauswahl \stepcounter{ID} \\
+    
     \midrule
     \multicolumn{3}{l}{\textbf{Planung}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
-    \theKat.\theID  & F     &   Gesamtarbeitszeitraum: 03.09.2018 - 21.12.2018 \newline
+    \theKat.\theID  & F     &   Gesamtarbeitszeitraum: 01.09.2019 - 30.04.2020 \newline
                                 Zwischenziele: \par
                                 \hspace*{4mm}\parbox[t]{12cm}{
-                                15.10.2018: Abschluss der konstruktiven Entwicklung \par
-                                19.11.2018: Abschluss der Fertigung, Lieferung aller Kaufteile \par
-                                21.12.2018: \parbox[t]{9.5cm}{Durchführung aller Versuche entsprechend der Versuchs\-planung und Dokumentation}}
+                                15.10.2019: Abschluss der konstruktiven Entwicklung \par
+                                31.12.2019: Abschluss der Fertigung, Lieferung aller Kaufteile \par
+                                29.02.2020: Fertigstellung der Gesamtmontage \par
+                                20.03.2020: Vorbereitung der Versuchsdurchführung \par
+                                30.04.2020: \parbox[t]{9.5cm}{Durchführung aller Versuche entsprechend der Versuchs\-planung und Dokumentation}}
 
     
     

@@ -6,7 +6,7 @@
 \centering
 %\rmfamily
 
-\begin{longtable}{p{1cm}p{1cm}p{13.3cm}} 
+\begin{longtable}{p{1cm}p{1cm}p{13.2cm}} 
 
     \caption{Anforderungsliste des Fernfeldmesstandes}\\[1.2\normalbaselineskip]
     \toprule 
@@ -62,9 +62,9 @@
     \multicolumn{3}{l}{\textbf{Energie}} \stepcounter{Kat} \setcounter{ID}{1} \\
     \midrule
 
-    \theKat.\theID  & F     & Auslegung und Auswahl aller Komponenten für Wellenfelder zwischen \SI{1}{\giga\hertz} und \SI{18}{\giga\hertz} lt. Aufgabenstellung                                                           \stepcounter{ID} \\
+    \theKat.\theID  & F     & Auslegung und Auswahl aller Komponenten für Wellenfelder zwischen \SI{0,8}{\giga\hertz} und \SI{18}{\giga\hertz} laut Aufgabenstellung                                                           \stepcounter{ID} \\
     \theKat.\theID  & F     & Ableiten auftretender Störströme an Kabeldurchführungen \stepcounter{ID} \\
-    \theKat.\theID  & F     & Verbindung der Schirmhülle mit Gebäudemasse~\cite{EMV, EMV-gerechtes_Geraetedesign} \stepcounter{ID} \\
+    \theKat.\theID  & F     & Verbindung der Schirmhülle mit Erdpotenzial~\cite{EMV, EMV-gerechtes_Geraetedesign} \stepcounter{ID} \\
 
     \midrule
     \multicolumn{3}{l}{\textbf{Kräfte}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
@@ -78,7 +78,7 @@
     \multicolumn{3}{l}{\textbf{Stoffe}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
         
-    \theKat.\theID  & F     & Verwendung metallischer Schirmhülle zum Gewährleisten hoher Leitfähigkeit (vgl. \Abschnitt\ref{cha:2_sub_Daempfung_und_Absorption},~\ref{cha:2_sub_Reflektion}~\ref{cha:2_sub_Schirmung_ebener_Wellenfelder}) \stepcounter{ID} \\ 
+    \theKat.\theID  & F     & Verwendung metallischer Schirmhülle zum Gewährleisten hoher Leitfähigkeit (vgl. \Abschnitt\ref{cha:2_sub_Daempfung_und_Absorption},~\ref{cha:2_sub_Reflektion},~\ref{cha:2_sub_Schirmung_ebener_Wellenfelder}) \stepcounter{ID} \\ 
     \theKat.\theID  & F     & Schirmdicke zur Gewährleistung von mindestens \SI{100}{\Dezibel} Schirmungseffektivität (vgl. \Gleichung\eqref{eq:2_Schirmungseffektivitaet}) ohne Durchführungen \stepcounter{ID} \\
     \theKat.\theID  & F     & Gewährleisten einer leitfähigen Verbindung aller Komponenten der Schirmhülle untereinander (vgl. \Abschnitt\ref{cha:2_sub_Schirmung_ebener_Wellenfelder}) \stepcounter{ID} \\
     \theKat.\theID  & F     & Verbindung der Kabelschirme mit der äußeren Schirmhülle oder Trennung äußerer und innerer Signalekabel durch Konnektoren~\cite{EMV}                                                \stepcounter{ID} \\     
@@ -88,12 +88,13 @@
     \multicolumn{3}{l}{\textbf{Signale}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
     
-    \theKat.\theID  & F     & Eingangssignal: Messsignal VNA 1-\SI{18}{\giga\hertz} \newline
+    \theKat.\theID  & F     & Eingangssignal: Messsignal VNA 0,8-\SI{18}{\giga\hertz} \newline
                               Ausgangssignal: empfangenes Messsignal nach Schirmdurchgang \stepcounter{ID} \\
     \theKat.\theID  & F     & Auswahl aller Komponenten der Signalübertragung mit gleicher Impedanz \newline
                                 \noindent\hspace*{4mm} - \SI{50}{\ohm} entsprechend des vorhandenen Messsystems~\cite{VNA-Datenblatt} \stepcounter{ID} \\
     \theKat.\theID  & F     & Schirmungseffektivität gegenüber äußeren Störungen unter Beachtung von Durchführungen und Kabelverbindungen \SI{\geq 60}{\Dezibel}                                         \stepcounter{ID} \\
-    \theKat.\theID  & W     & Möglichst geringes VSWR aller verwendeten Komponenten\footnote{Bei Anpassung bzw. Kalibration der Messtechnik auf die verwendeten Komponenten nur von geringer Bedeutung~\cite{}} \stepcounter{ID} \\ 
+    \theKat.\theID  & F     & Kopplungsdämpfung der verwendeten Signallkabel \SI{>70}{\Dezibel}~\cite{DIN_EN_61000-5-7} \stepcounter{ID} \\
+    \theKat.\theID  & W     & Möglichst geringes VSWR aller verwendeten Komponenten \stepcounter{ID} \\ 
 
     \midrule
     \multicolumn{3}{l}{\textbf{Sicherheit}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
@@ -122,7 +123,7 @@
     \midrule
     \multicolumn{3}{l}{\textbf{Montage}} \stepcounter{Kat} \setcounter{ID}{1} \\ 
     \midrule
-    \theKat.\theID  & F     & Berücksichtigung der Montagebestimmungen für Kaufteile und Verbindungs\-elemente \stepcounter{ID} \\
+    \theKat.\theID  & F     & Berücksichtigung der Montagebestimmungen für Verbindungselemente und Kaufteile \stepcounter{ID} \\
     \theKat.\theID  & W     & Gesamtmontage des Versuchsstandes vor Ort                 \stepcounter{ID} \\
     \midrule
     \multicolumn{3}{l}{\textbf{Kontrolle}} \stepcounter{Kat} \setcounter{ID}{1} \\ 

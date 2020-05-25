@@ -1,0 +1,56 @@
+
+
+Im \Abschnitt\ref{cha:2_sub_Begriff_der_Schirmdaempfung} wurde bereits auf den Begriff der Schirmdämpfung als Pegelmaß der Feldgrößenbeträge (vgl. \Gleichungen\eqref{eq:2_Schirmdaempfung_elektrisch} bis \eqref{eq:2_Schirmdaempfung_Leistung}) eingegangen. Bei der Bestimmung der Schirmdämpfung mit einem VNA eignet sich jedoch die Betrachtung der Messstrecke mithilfe der Zweitortheorie. Dabei stellt die Messstrecke einen passiven Zweipol dar, der sich analog zu einem passiven elektrischen Bauelement verhält und durch Wellengrößen eindeutig beschrieben werden kann. In der \Abb\ref{fig:4_Zweitor} ist dies schematisch dargestellt, wobei die jeweils zulaufenden Wellen durch die Größen $\underline{a}_1$ und $\underline{a}_2$ und die ablaufenden mit $\underline{b}_1$ und $\underline{b}_2$ gekennzeichnet sind~\cite{Taschenbuch_HF-Technik}. 
+\par
+\vspace{\linespace}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[page = 1, trim = 5.9cm 24cm 5.9cm 1.3cm, clip, width = 0.5\textwidth]{Abbildungen/Kapitel4/Zweitor.pdf}
+    \caption{Zweitor mit Wellengrößen nach~\cite{Taschenbuch_HF-Technik}}
+    \label{fig:4_Zweitor}
+\end{figure}
+
+
+In der Praxis hat die Darstellung mithilfe der Wellengrößen den Vorteil, dass diese auch bei hohen Frequenzen direkt gemessen werden können~\cite{Taschenbuch_HF-Technik}. Neben der äquivalenten Beschreibung des Verhaltens des Zweitors durch Beziehungen zwischen den Torspannungen und -strömen kann das Übertragungsverhalten auch mithilfe der Streumatrix $\underline{S}$ 
+
+
+\begin{equation}
+\centering
+    \left(\begin{array}{c}\underline{b}_1 \\ \underline{b}_2 \end{array}\right) = \left(\begin{array}{cc}\underline{S}_{11} & \underline{S}_{12} \\ \underline{S}_{21} & \underline{S}_{22} \end{array}\right) \left(\begin{array}{c}\underline{a}_{1} \\ \underline{a}_{2} \end{array}\right) \label{cha:4_Streuparameter}
+\end{equation}
+
+charakterisiert werden~\cite{Taschenbuch_HF-Technik}. Die Streumatrix $\underline{S}$ ist für struktursymmetrische Zweitore ebenfalls symmetrisch~\cite{Grundkurs_Hochfrequenztechnik}.  
+\par
+\vspace{\linespace}
+Die Bestimmung der Streuparameter oder S-Parameter $\underline{S}_{11}$ bis $\underline{S}_{22}$ kann nun durch die Beschaltung jeweils eines Tores mit der Systemimpedanz durch den VNA erfolgen. Dies führt im Idealfall zum reflexionsfreien Abschluss des Tores, wodurch die jeweils zulaufende Wellengröße $\underline{a}_1$ bzw. $\underline{a}_2$ verschwindet~\cite{Grundkurs_Hochfrequenztechnik}. Die Berechnung der Streuparameter mithilfe der \Gleichung\eqref{cha:4_Streuparameter} wird damit trivial.
+\par
+\vspace{\linespace}
+Für die Deutung der S-Parameter ist die Reihenfolge der Indizes relevant. $\underline{S}_{11}$ und $\underline{S}_{22}$ beschreiben den primären bzw. sekundären Reflektionsfaktor bei Abschluss des jeweils anderen Tores. Der Transmissionskoeffizient $\underline{S}_{21}$ charakterisiert die Transmission von 1 nach 2 bei abgeschlossenem Tor 2. Die Bedeutung von $\underline{S}_{12}$ ergibt sich analog durch Vertauschen der Tore. Das Signalflussdiagramm in \Abb\ref{fig:4_Signalflussdiagramm_Zweitor} veranschaulicht die Zuordnung der Indizes zu den einzelnen Streuparametern.
+\par
+\vspace{\linespace}
+
+\begin{figure}
+    \centering
+    \includegraphics[page = 1, trim = 5.9cm 19.2cm 5.9cm 5cm, clip, width = 0.5\textwidth]{Abbildungen/Kapitel4/Zweitor.pdf}
+    \caption{Signalflussdiagramm eines Zweitors mit Streuparametern nach~\cite{Grundkurs_Hochfrequenztechnik}}
+    \label{fig:4_Signalflussdiagramm_Zweitor}
+\end{figure}
+
+Um mit der ermittelten und im Allgemeinen komplexen Streumatrix als Übertragungsmaß zu arbeiten, bietet sich die logarithmische Darstellung an, weshalb die Angabe der S-Parameter oft in Dezibel erfolgt.
+
+\begin{equation}
+    S_{12, dB} = 20 \cdot \lg \left( \left| \underline{S}_{12} \right| \right)
+\end{equation}
+
+
+
+
+%Bei Messung der Schirmdämpfung --> da rein passiv und nach Reziprozitätsgesetz sollte Streumatrix ebenfalls symmetrisch sein --> kann an Messwerten angelesen werden (ggf. Vergleich einfügen)
+
+%Einfügungsmessung erklären mit Freiraumdämpfung, etc.
+
+
+
+

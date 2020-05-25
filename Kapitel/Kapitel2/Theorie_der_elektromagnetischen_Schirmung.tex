@@ -1,10 +1,10 @@
 Wie bereits im vorherigen \Abschnitt \ref{cha:2_Wellenausbreitung} angedeutet, besitzen elektromagnetische Felder in Abhängigkeit ihrer Frequenz unterschiedliche Eigenschaften, welche unterschiedliche Schirmungsmechanismen in Bezug auf die Abmessung der verwendeten Anordnung und der Art des Feldes notwendig machen. Da die Messungen im Rahmen dieser Arbeit im Fernfeld einer Antenne stattfinden sollen und auch der zu nutzende Freqeunzbereich mit $1\ldots$\SI{18}{\giga\hertz} deutlich über der Grenze von \SI{30}{\mega\hertz} liegt, ab der man nach~\cite{Design_of_shielded_enclosures} von der Ausbreitung ebener Wellen unabhängig von der Antennenbauart ausgegehen kann, soll sich die Betrachtung von Schirmungsmethoden auf das sogenannte elektromagnetische Wellenfeld beschränkten. Dies deckt sich mit der Einteilung elektromagnetischer Felder nach~\cite{Feldtheorie_Begriffe} und dem Richtwert für die Anwendung der Schirmungsmechanismen für Wellenfelder nach~\cite{EM_Schirmung}
 
 \begin{equation}
-    f > \frac{c_0}{d}
+    f > \frac{c_0}{d_S}
 \end{equation}
 
-mit einer Schirmabmessung $d$ im Bereich von \SI{1}{\meter} und Frequenzen $f$ im Bereich von $1\ldots$\SI{18}{\giga\hertz}.
+mit einer Schirmabmessung $d_S$ im Bereich von \SI{1}{\meter} und Frequenzen $f$ zwischen $1$ und~\SI{18}{\giga\hertz}.
 
 %Induktion als charakteristisches Merkmal in diesem Anwednungsbreich
 
@@ -70,12 +70,12 @@ Ein Schirm wird im Allgemeinen im Rahmen elektromagnetischer Anwendung dazu eing
 
 \par
 \vspace{\linespace}
-Die im Allgemeinen verursachte Phasenverschiebung durch den Schirm, macht $Q$ zu einer komplexen Größe~\cite{EM_Schirmung}. Da in den meisten Fällen jedoch vor allem der Betrag von Interesse ist, wird die Schirmdämpfung $a_S$ als Pegelmaß der Feldgrößenbeträge definiert:
+Die im Allgemeinen verursachte Phasenverschiebung durch den Schirm, macht $Q$ zu einer komplexen Größe~\cite{EM_Schirmung}. Da in den meisten Fällen jedoch vor allem der Betrag von Interesse ist, wird die Schirmdämpfung $a$ als Pegelmaß der Feldgrößenbeträge definiert:
 
 \begin{align}
-    a_e &= 20 \cdot \lg \left(\frac{\abs{E_0}}{\abs{E_1}}\right) = 20 \cdot \lg \frac{1}{\abs{Q_e}} \\
-    a_m &= 20 \cdot \lg \left(\frac{\abs{H_0}}{\abs{H_1}}\right) = 20 \cdot \lg \frac{1}{\abs{Q_m}} \\
-    a_S &= 10 \cdot \lg \left(\frac{\abs{P_0}}{\abs{P_1}}\right) \; \text{.}
+    a_e &= 20 \cdot \lg \left(\frac{\abs{E_0}}{\abs{E_1}}\right) = 20 \cdot \lg \frac{1}{\abs{Q_e}} \label{eq:2_Schirmdaempfung_elektrisch}\\
+    a_m &= 20 \cdot \lg \left(\frac{\abs{H_0}}{\abs{H_1}}\right) = 20 \cdot \lg \frac{1}{\abs{Q_m}} \label{eq:2_Schirmdaempfung_magnetisch}\\
+    a_S &= 10 \cdot \lg \left(\frac{\abs{P_0}}{\abs{P_1}}\right) \; \text{.} \label{eq:2_Schirmdaempfung_Leistung}
 \end{align}
 
 Zur Charakterisierung von Gehäusen, etc. wird oft nur die minimal erreichbare Schirmdämpfung angegeben, da sich durch Schwankungen in der Feldverteilung starke räumliche Unterschiede innerhalb der Systemgrenzen ergeben können~\cite{EM_Schirmung}. Da nach der Definition der Schirmdämpfung die Feldgrößen einmal mit und einmal in Abwesenheit eines Schirmes gemessen werden muss und dies nicht zeitgleich erfolgen kann, bezeichnet man die Bestimmung der Schirmwirkung auch als Einfügungsmessung, da der Schirm im Verlauf der Messung zwischen Sende- und Empfangseinrichtung eingefügt wird. Auf die unterschiedlichen Messmethoden wird im \Abschnitt\ref{cha:2_Methoden_der_Schirmdaempfungsmessung} genauer eingegangen.
@@ -124,14 +124,14 @@ und gibt an, in welcher Entfernung von der Randschicht ein äußeres Feld um den
 
 \subsubsection{Schirmungseffektivität}\label{cha:2_subsub_Schirmungseffektivitaet}
 
-Für die Bestimmung der Effektivität eines Schirmes gegen eindrigende Strahlung ist jedoch nicht nur der Absorbtionsverlust durch Erzeugung von Wirbelfeldern, sondern auch der reflektierte Anteil der eintreffenden Welle (vergleiche \Abschnitt\ref{cha:2_sub_Reflektion}) entscheident. Nach~\cite{Problems_in_shielding_electronic_equiptment, NASA_SP-3067} ergibt sich die Schirmungseffektivität $S$ in Dezibel aus
+Für die Bestimmung der Effektivität eines Schirmes gegen eindrigende Strahlung ist jedoch nicht nur der Absorbtionsverlust durch Erzeugung von Wirbelfeldern, sondern auch der reflektierte Anteil der eintreffenden Welle (vergleiche \Abschnitt\ref{cha:2_sub_Reflektion}) entscheident. Nach~\cite{Problems_in_shielding_electronic_equiptment, NASA_SP-3067} ergibt sich die Schirmungseffektivität für ebene Wellen $S_w$ in Dezibel
 
 \begin{equation}
     S_w \; \left[\text{dB}\right] = R_w \; \left[\text{dB}\right] + A_w \; \left[\text{dB}\right] + B_w \; \left[\text{dB}\right]
     \label{eq:2_Schirmungseffektivitaet}
 \end{equation}
 
-mit dem Reflektionsverlust \acs{R_w}, der Absorbptionsdämpfung \acs{A_w} und dem Korrekturfaktor \acs{B_w} für Reflektionen innerhalb des Schirms bzw. beim Übergang der inneren Grenzflächen (vgl.~\Abschnitt\ref{cha:2_sub_Verhalten_an_Grenzflächen}). Für $A_w > 15 \si{\Dezibel}$ kann \acs{B_w} jedoch vernachlässigt werden~\cite{NASA_SP-3067}. In dem Fall, dass die Feldquelle mehr als eine Wellenlänge $\lambda$ oder in einem Abstand von mindestens $D^2 / \lambda$, mit der größten Ausdehnung der Feldquelle $D$, vom Schirm entfernt positioniert ist, ist für die Bestimmung von \acs{R_w} nach~\cite{NASA_SP-3067} die Beziehung für ebene Wellen in jedem Fall ausreichend.  
+als Summe aus dem Reflektionsverlust \acs{R_w}, der Absorbptionsdämpfung \acs{A_w} und dem Korrekturfaktor \acs{B_w} für Reflektionen innerhalb des Schirms bzw. beim Übergang der inneren Grenzflächen (vgl.~\Abschnitt\ref{cha:2_sub_Verhalten_an_Grenzflächen}). Für $A_w > 15 \si{\Dezibel}$ kann \acs{B_w} jedoch vernachlässigt werden~\cite{NASA_SP-3067}. In dem Fall, dass die Feldquelle mehr als eine Wellenlänge $\lambda$ oder in einem Abstand von mindestens $D^2 / \lambda$, mit der größten Ausdehnung der Feldquelle $D$, vom Schirm entfernt positioniert ist, ist für die Bestimmung von \acs{R_w} nach~\cite{NASA_SP-3067} die Beziehung für ebene Wellen in jedem Fall ausreichend.  
 \par
 \vspace{\linespace}
 Zur einfacheren Bestimmung der Summanden \acs{R_w} und \acs{A_w} kann auf Nomogramme zurückgegriffen werden. Somit kann für eine gegebene Frequenz der zu schirmenden Welle und ein ausgewähltes Material direkt der entsprechende Verlust beim Materialdurchgang abgelesen werden. Im \Anhang\ref{Anhang:Nomogramm_Reflektionsdaempfung},~\ref{Anhang:Nomogramm_Absorptionsverlust} sind die Schaubilder nach~\cite{Simplified_shielding} dargestellt. 
@@ -172,7 +172,7 @@ Zur Vermeidung von nichtlinearen Sättigungserscheinungen des Schirms werden in 
 
 
 \subsubsection{Hohlwellenleiter}\label{cha:2_subsub_Hohlwellenleiter}
-Das Phänomen der vollständigen Reflektion ebener Wellen an idealleitendes Flächen (vgl.~\Abschnitt\ref{cha:2_sub_Reflektion}) legt eine Anwendung von Hohlkonstruktionen als Wellenleiter nahe. 
+Das Phänomen der vollständigen Reflektion ebener Wellen an idealleitenden Flächen (vgl. \Abschnitt\ref{cha:2_sub_Reflektion}) legt eine Anwendung von Hohlkonstruktionen und Durchführungen als Wellenleiter nahe. 
 \par
 \vspace{\linespace}
 \begin{figure}
@@ -188,7 +188,7 @@ Wird für eine ebene Welle, wie in \Abb\ref{fig:2_Hohlwellenleiter} dargestellt,
     \sin{\vartheta} = \frac{n \cdot \lambda_0}{2 a} \; , \qquad n \in \mathbb{N}
 \end{equation}
  
-Mit $n=1$ wird dabei die Grundwelle beschrieben und mit $n>1$ die sogenannten höheren Wellentypen~\cite{Taschenbuch_HF-Technik}.
+Mit $n=1$ wird dabei die Grundwelle beschrieben und mit $n>1$ die sogenannten höheren Wellen\-typen~\cite{Taschenbuch_HF-Technik}.
 \par
 \vspace{\linespace}
 Die in  \Abb\ref{fig:2_Hohlwellenleiter} dargestellten gestrichelten Linien stellen die Ebenen konstanter Phase dar und deren Abstand ist die Hohlleiterwellenlänge $\lambda_H$ für die gilt~\cite{Taschenbuch_HF-Technik}:
@@ -228,10 +228,10 @@ Zur Bestimmung der Grenzfrequenzen in verschiedenen Leiterquerschnitten müssen 
 
 \par
 \vspace{\linespace}
-Wellen mit $f < f_k$ erfahren innerhalb eines Hohlleiters mit der Länge $l$ eine Dämpfung~\cite{EM_Schirmung}:
+Wellen mit $f < f_k$ erfahren innerhalb eines Hohlleiters mit der Länge $L$ eine Dämpfung~\cite{EM_Schirmung}:
 
 \begin{align}
-    S_{WL} \left[\si{\Dezibel}\right] &= 20\log_{10}\left(e^{\alpha\cdot l}\right)  \\
+    S_{WL} \left[\si{\Dezibel}\right] &= 20\log_{10}\left(e^{\alpha\cdot L}\right)  \\
     \alpha &= \frac{2\pi}{\lambda_k} \sqrt{1-\left(\frac{\lambda_k}{\lambda_0}\right)^2} = \frac{2\pi f_k}{c_0} \sqrt{1-\left(\frac{f}{f_k}\right)^2} \qquad \text{für} \quad f < 0,8 f_k
 \end{align}
 
@@ -243,10 +243,7 @@ Wellen mit $f < f_k$ erfahren innerhalb eines Hohlleiters mit der Länge $l$ ein
 Die Betrachtung des vorangegangenen \Abschnitts\nameref{cha:2_subsub_Hohlwellenleiter} kann im Weiteren auf ein geschlossenes, leitfähiges Gehäuse ausgeweitet werden, das im Wesentlichen einen Hohlwellenleiter mit kurzgeschlossenen Enden darstellt. Entsprechend der Grenzbedingungen für das elektrische und magnetische Feld (vgl.~\Abschnitte\ref{cha:2_sub_Verhalten_an_Grenzflächen},~\ref{cha:2_sub_Reflektion}) wird eine eingekoppelte Hohlleiterwelle im Idealfall an den Gehäuseenden vollständig reflektiert. Die Überlagerung der hin- und rücklaufenden Welle führt bei ausgezeichneten Anregungsfrequenzen zum Resonanzfall, wodurch ein sogenannter Hohlraumresonator entsteht. Anschaulich ist klar, dass zum Auftreten einer Resonanz eine stehende Welle mit einem ganzzahligen Vielfachen ihrer Wellenlänge in den Bereich der Schirmabmessung kommen muss.
 \par
 \vspace{\linespace}
-Aufgrund der dabei entstehenden hohen Verstärkung der Hohlraumwelle kann im Bereich dieser Frequenzen eine deutliche Reduktion der Schirmwirkung des Gehäuses beobachtet werden~\cite{EM_Schirmung}. Ein gängiger Weg zur Reduktion dieses Phänomens ist der Einsatz von Absorbermaterialien innerhalb des Schirmgehäuses~\cite{EM_Schirmung}. Für die Auswahl der richtigen Absorber kann dabei die Kenntnis der Resonanzfrequenzen entscheidend sein. 
-\par
-\vspace{\linespace}
-Die Resonanzfrequenzen lassen sich für ein quaderförmiges Gehäuse mit den Seitenlängen $a, b, c$ relativ einfach bestimmen~\cite{Klassische_Elektrodynamik}
+Aufgrund der dabei entstehenden hohen Verstärkung der Hohlraumwelle kann im Bereich dieser Frequenzen eine deutliche Reduktion der Schirmwirkung des Gehäuses beobachtet werden~\cite{EM_Schirmung}. Ein gängiger Weg zur Reduktion dieses Phänomens ist der Einsatz von Absorbermaterialien innerhalb des Schirmgehäuses~\cite{EM_Schirmung}. Für die Auswahl der richtigen Absorber kann dabei die Kenntnis der Resonanzfrequenzen entscheidend sein. Diese lassen sich für ein quaderförmiges Gehäuse mit den Seitenlängen $a, b, c$ relativ einfach bestimmen~\cite{Klassische_Elektrodynamik}
 
 \begin{equation}
     f_R = \frac{c_0}{2}\cdot \sqrt{\left(\frac{l}{a}\right)^2+\left(\frac{m}{b}\right)^2+\left(\frac{n}{c}\right)^2} \; \text{.}

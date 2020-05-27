@@ -88,7 +88,11 @@ Während der Feldwellenwiderstand, über den die elektrischen und magnetischen F
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[page=1, width=0.8\textwidth, trim = 1.3cm 8.5cm 1.5cm 7cm, clip]{Abbildungen/Kapitel2/Feldwellenwiderstand.pdf}
+    \begin{tikzpicture}
+    \node(img){\includegraphics[page=1, width=0.8\textwidth, trim = 2cm 9.5cm 1.5cm 7cm, clip]{Abbildungen/Kapitel2/Feldwellenwiderstand.pdf}};
+    \node[below=4cm] at (img) {Normierter Abstand $\tilde r = 2\pi r / \lambda$};
+	\node[rotate=90, above=6.5cm] at (img) {Feldwellenwiderstand $|\underline{Z}|$ ($\Omega$)};
+    \end{tikzpicture}
     \caption[Verläufe des Feldwellenwiderstandes hoch- und niederohmiger Felder von Stab- und Rahmenantennen in Abhängigkeit des normierten Abstandes von der Feldquelle]{Verläufe des Feldwellenwiderstandes hoch- und niederohmiger Felder von Stab- und Rahmenantennen in Abhängigkeit des normierten Abstandes von der Feldquelle nach~\cite{EMV}}
     \label{fig:2_Feldwellenwiderstand}
 \end{figure}

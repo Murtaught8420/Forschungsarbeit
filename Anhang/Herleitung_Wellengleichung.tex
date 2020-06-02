@@ -1,6 +1,6 @@
 \chapter{Herleitung der Wellengleichungen ebener, harmonischer Wellen}\label{Anhang:Herleitung_Wellengleichung}
 
-Ausgangspunkt für die folgende Herleitung nach~\cite{EM_Schirmung} sind die Maxwell'schen Gleichungen~\cite{Maxwell} für ein isotropes und homogenes Ausbreitungsmedium ohne Raumladungen, sodass sich reine Wirbelfelder ausbilden können. Außerdem sei Linearität und Zeitinvarianz des Mediums vorausgesetzt:
+Ausgangspunkt für die folgende Herleitung nach~\cite{EM_Schirmung} sind die Maxwell'schen Gleichungen~\cite{Maxwell} für ein isotropes und homogenes Ausbreitungsmedium ohne Raumladungen, sodass sich reine Wirbelfelder ausbilden können. Außerdem sei Linearität und Zeitinvarianz des Mediums vorausgesetzt.
 
 \begin{subequations}
     \begin{align}
@@ -25,7 +25,7 @@ Damit lassen sich nach der Rotationsbildung
     \end{align}
 \end{subequations}
 
-bei der entsprechend der vorausgesetzten Linearität die dargestellten Vereinfachungen beim Einsetzen der Vektoridentität vorgenommen wurde, die sogenannten Telegraphengleichungen mit der Wellenausbreitungsgeschwindigkeit $v = \frac{1}{\sqrt{\varepsilon \mu}}$ bilden~\cite{EM_Schirmung}:
+bei der entsprechend der vorausgesetzten Linearität die dargestellten Vereinfachungen beim Einsetzen der Vektoridentität vorgenommen wurde, die sogenannten Telegraphengleichungen mit der Wellenausbreitungsgeschwindigkeit $v =(\sqrt{\varepsilon \mu})^{-1}$ bilden~\cite{EM_Schirmung}:
 
 \begin{subequations}
     \label{eq:A_Telegraphengleichungen}
@@ -57,8 +57,7 @@ was sich für eine mehrfach stetig differenzierbare Funktion $u$ mit dem Satz vo
     \left(\frac{1}{v} \frac{\partial u}{\partial t} - \frac{\partial u}{\partial x}\right) \cdot \left(\frac{1}{v} \frac{\partial u}{\partial t} + \frac{\partial u}{\partial x}\right) = 0
 \end{equation}
 
-umstellen lässt. \par
-Damit wird die Struktur der Lösung für die allgemeine Funktion $u(x,t)$ 
+umstellen lässt. Damit wird die Struktur der Lösung für die allgemeine Funktion $u(x,t)$ 
 
 \begin{equation}
     u(x,t) = f(x+vt) + g(x-vt)
@@ -73,7 +72,8 @@ ersichtlich~\cite{Methoden_physikalischer_Mathematik_Band_2}. $f$ und $g$ sind z
     \end{align}
 \end{subequations}
 
-für sich ungedämpft und unverzerrt ausbreitende Wellen. Wie bereits erwähnt können $\vec E$ und $\vec H$ dabei beliebige, zweifach stetig differenzierbare Funktionen sein. Im Fall der harmonischen Anregung mit der Frequenz $f$ bzw. der Kreisfrequenz $\omega = 2\pi f$ ergeben sich gut zu beschreibende Zeitverläufe, mit deren Grundlage sich mittels der Fourier-Transformation in linearen Ausbreitungsmedien beliebige Zeitverläufe beschreiben lassen. \par
+für sich ungedämpft und unverzerrt ausbreitende Wellen. Wie bereits erwähnt können $\vec E$ und $\vec H$ dabei beliebige, zweifach stetig differenzierbare Funktionen sein. Im Fall der harmonischen Anregung mit der Frequenz $f$ bzw. der Kreisfrequenz $\omega = 2\pi f$ ergeben sich gut zu beschreibende Zeitverläufe, mit deren Grundlage sich mittels der Fourier-Transformation in linearen Ausbreitungsmedien beliebige Zeitverläufe beschreiben lassen. 
+\newpage
 Für die Darstellung ist es zweckmäßig, die Wellenzahl $k = 2\pi / \lambda = \omega \sqrt{\varepsilon \mu}$ einzuführen~\cite{EM_Schirmung}. Damit gilt unter Verwendung der Euler'schen Form $e^{jx} = \cos{x} + j \sin{x}$~\cite{Merzinger}:
 \begin{subequations}
     \begin{align}
@@ -103,8 +103,7 @@ Für die bessere Darstellung der Lösung kann auch hier die Wellenzahl $k$
     k = \sqrt{\varepsilon \mu \omega^2 - j \omega \sigma \mu}
 \end{equation}
 
-eingeführt werden, die jetzt allerdings komplex ist. \par
-In gleicher Weise wie im Fall~\uproman{1} erhält man die Lösung der Diffenrentialgleichung~\cite{Methoden_physikalischer_Mathematik_Band_2} mit der komplexen Wellenzahl $k$:
+eingeführt werden, die jetzt allerdings komplex ist. In gleicher Weise wie im Fall~\uproman{1} erhält man die Lösung der Diffenrentialgleichung~\cite{Methoden_physikalischer_Mathematik_Band_2} mit der komplexen Wellenzahl $k$:
 
 \begin{subequations}
     \begin{align}

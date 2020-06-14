@@ -1,6 +1,6 @@
 
 
-Wie bereits im vorherigen \Abschnitt \ref{cha:2_Wellenausbreitung} angedeutet, besitzen elektromagnetische Felder in Abhängigkeit ihrer Frequenz unterschiedliche Eigenschaften, welche unterschiedliche Schirmungsmechanismen in Bezug auf die Abmessung der verwendeten Anordnung und der Art des Feldes notwendig machen. Da die Messungen im Rahmen dieser Arbeit im Fernfeld einer Antenne stattfinden sollen und auch der zu nutzende Frequenzbereich mit $0,8$--\SI{18}{\giga\hertz} deutlich über der Grenze von \SI{30}{\mega\hertz} liegt, ab der man nach~\cite{Design_of_shielded_enclosures} von der Ausbreitung ebener Wellen unabhängig von der Antennenbauart ausgehen kann, soll sich die Betrachtung von Schirmungsmethoden auf das sogenannte elektromagnetische Wellenfeld beschränkten. Dies deckt sich mit der Einteilung elektromagnetischer Felder nach~\cite{Feldtheorie_Begriffe} und dem Richtwert für die Anwendung der Schirmungsmechanismen für Wellenfelder nach~\cite{EM_Schirmung}
+Wie bereits im vorherigen \Abschnitt \ref{cha:2_Wellenausbreitung} angedeutet, besitzen elektromagnetische Felder in Abhängigkeit ihrer Frequenz unterschiedliche Eigenschaften, welche verschiedene Schirmungsmechanismen in Bezug auf die Abmessung der verwendeten Anordnung und die Art des Feldes notwendig machen. Da die Messungen im Rahmen dieser Arbeit im Fernfeld einer Antenne stattfinden sollen und auch der Messbereich deutlich über der Grenze von \SI{30}{\mega\hertz} liegt, ab der man nach~\cite{Design_of_shielded_enclosures} von der Ausbreitung ebener Wellen unabhängig von der Antennenbauart ausgehen kann, soll sich die Betrachtung von Schirmungsmethoden auf das sogenannte elektromagnetische Wellenfeld beschränkten. Dies deckt sich mit der Einteilung elektromagnetischer Felder nach~\cite{Feldtheorie_Begriffe} und dem Richtwert für die Anwendung der Schirmungsmechanismen für Wellenfelder nach~\cite{EM_Schirmung}
 
 \begin{equation}
     f > \frac{c_0}{d_S}
@@ -18,16 +18,16 @@ Um im Weiteren eine einheitliche Begriffsgrundlage vorauszusetzen, soll an diese
 
 \subsubsection{Pegelmaße}
 
-Generell wird für die Darstellung von Verhältnissen elektrischer und magnetischer Feldgrößen gern auf logarithmische Verhältnisse, sogenannte Pegel in Dezibel zurückgegriffen. Dies hat den Vorteil eines großen Dynamikbereiches in der Darstellung und erleichtert verschiedene Rechnungen. Unterschieden wird dabei zwischen relativen und bezogenen Pegeln. Relative Pegel, auch als Übertragungsmaße bezeichnet, stellen die Verhältnisse zweier Größen dar und dienen damit der Charakterisierung von Dämpfungen oder dem Ausdruck von Antennengewinnen. Für Feldgrößen $X$, wie Spannung, Ströme oder Feldstärken, ist der relative Pegel anders definiert~\cite{EM_Schirmung}
+Generell wird für die Darstellung von Verhältnissen elektrischer und magnetischer Feldgrößen gern auf logarithmische Verhältnisse, sogenannte Pegel in Dezibel zurückgegriffen. Dies hat den Vorteil eines großen Dynamikbereiches in der Darstellung und erleichtert verschiedene Rechnungen. Unterschieden wird dabei zwischen relativen und bezogenen Pegeln. Relative Pegel, auch als Übertragungsmaße bezeichnet, stellen die Verhältnisse zweier Größen dar und dienen damit der Charakterisierung von Dämpfungen oder dem Ausdruck von Antennengewinnen. Für Feldgrößen $X$ wie Spannungen, Ströme oder Feldstärken ist der relative Pegel anders definiert~\cite{EM_Schirmung}
 
 \begin{equation}
-    X \; \left[\si{\Dezibel}\right] = 20 \cdot \log_{10} \left( \frac{X_1}{X_2} \right) = 20 \cdot \lg \left( \frac{X_1}{X_2} \right) \label{eq:2_Relativer_Pegel_Feldgroessen}
+    X \; \left(\si{\Dezibel}\right) = 20 \cdot \log_{10} \left( \frac{X_1}{X_2} \right) = 20 \cdot \lg \left( \frac{X_1}{X_2} \right) \label{eq:2_Relativer_Pegel_Feldgroessen}
 \end{equation}
 
 als für Leistungen $p$
 
 \begin{equation}
-    p \; \left[\si{\Dezibel}\right] = 10 \cdot \lg \left( \frac{P_1}{P_2} \right) \; \text{.} \label{eq:2_Relativer_Pegel_Leistung}
+    p \; \left(\si{\Dezibel}\right) = 10 \cdot \lg \left( \frac{P_1}{P_2} \right) \; \text{.} \label{eq:2_Relativer_Pegel_Leistung}
 \end{equation}
 
 Für ein intuitiveres Verständnis der Bedeutung bestimmter Pegel für das reale Größenverhältnis zweier Feldgrößen bzw. Leistungen sind in der \Tabelle\ref{tab:2_Relative_Pegel} gängige Pegel beispielhaft dargestellt.
@@ -57,7 +57,7 @@ Bezogene Pegel beschreiben im Gegensatz dazu Absolutwerte einer Größe in Bezug
     p_{1 \si{\milli\watt}} = 10 \cdot \lg \left( \frac{P_1}{1 \si{\milli\watt}}\right) \si{\Dezibel} \; .
 \end{equation}
 
-Auf eine Kennzeichnung des Bezuges an der Einheit $\si{\Dezibel}$ soll ausdrücklich verzichtet werden, obwohl dies die in der Literatur vorherrschende Schreibweise ist. 
+Auf eine Kennzeichnung des Bezugs an der Einheit $\si{\Dezibel}$ soll ausdrücklich verzichtet werden, obwohl dies die in der Literatur vorherrschende Schreibweise ist. 
 
 
 \subsubsection{Schirmdämpfung}\label{cha:2_subsub_Schirmdaempfung}
@@ -101,7 +101,7 @@ Mithilfe des Durchflutungsgesetzes~\cite{Maxwell}
 kann dies zur Schaffung eines wirksamen Schirmes genutzt werden. Für Frequenzen oberhalb von \SI{30}{\mega\hertz} und Feldquellen mit mehr als wenigen Zentimeter Abstand zum Schirm muss die Schirmdämpfung deshalb nicht für magnetische und elektrische Felder gesondert berechnet werden~\cite{Design_of_shielded_enclosures}. Dies gilt insbesondere für die Absorptionsverluste im Material, die unabhängig vom Typ der Feldquelle sind~\cite{NASA_SP-3067}.   
 \par 
 \vspace{\linespace}
-Die Wirkungsweise wird bei Betrachtung eines leitfähigen Materialblockes schnell deutlich. Bei Durchsetzung mit einem statischen Magnetfeld durchdringt dieses den Block vollständig und ohne jegliche Schirmung unter der Annahme $\mu = 1$. Handelt es sich bei dem Magnetfeld nun allerdings um ein Wechselfeld mit $f > 0$, so wird nach \Gleichung\eqref{eq:2_Induktionsgesetz} ein elektrisches Wirbelfeld um die magnetischen Flusslinien induziert~\cite{EM_Schirmung}. Im leitfähigen Material bilden sich daraufhin Wirbelströme aus, die nach \Gleichung\eqref{eq:2_Durchflutungsgesetz} ihrerseits ein Magnetfeld erzeugen, das nach der Lenz'schen Regel seiner Ursache, also dem ursprünglichen, äußeren Magnetfeld entgegengerichtet ist und dieses durch Überlagerung abschwächt~\cite{EM_Schirmung}. Mit höherer Frequenz des Magnetfeldes und höherer Leitfähigkeit des Schirms steigt die Schirmwirkung des Materials aufgrund der besser fließenden Wirbelströme. Je höher die Frequenz, umso stärker verdichten sich die Magnetfeldlinien des äußeren und des Gegenfeldes am Rand des Materials, ebenso wie die Stromdichte~\cite{EM_Schirmung}. Dieses als Stromverdrängung oder Skineffekt bekannte Phänomen führt bei hoher Frequenz dazu, dass die induzierten Ströme nur noch auf der äußeren Randschicht des Schirmmaterials fließen. In diesem Falls wirkt nur die äußere Materialschicht dem anliegenden Feld entgegen, sodass die gleiche Schirmwirkung mit einer hohlen, leitfähigen Hülle erreicht werden kann, welche damit auch die einfachste Möglichkeit eines elektrodynamischen Schirmes darstellt. 
+Die Wirkungsweise wird bei Betrachtung eines leitfähigen Materialblockes schnell deutlich. Bei Durchsetzung mit einem statischen Magnetfeld durchdringt dieses den Block vollständig und ohne jegliche Schirmung unter der Annahme $\mu = 1$. Handelt es sich bei dem Magnetfeld nun allerdings um ein Wechselfeld mit $f > 0$, so wird nach \Gleichung\eqref{eq:2_Induktionsgesetz} ein elektrisches Wirbelfeld um die magnetischen Flusslinien induziert~\cite{EM_Schirmung}. Im leitfähigen Material bilden sich daraufhin Wirbelströme aus, die nach \Gleichung\eqref{eq:2_Durchflutungsgesetz} ihrerseits ein Magnetfeld erzeugen, das nach der Lenz'schen Regel seiner Ursache, also dem äußeren Magnetfeld, entgegengerichtet ist und dieses durch Überlagerung abschwächt~\cite{EM_Schirmung}. Mit höherer Frequenz des Magnetfeldes und höherer Leitfähigkeit des Schirms steigt die Schirmwirkung des Materials aufgrund der besser fließenden Wirbelströme. Je höher die Frequenz, umso stärker verschieben sich die Magnetfeldlinien des äußeren und des Gegenfeldes an den Rand des Materials, ebenso wie die Stromdichte~\cite{EM_Schirmung}. Dieses als Stromverdrängung oder Skineffekt bekannte Phänomen führt dazu, dass die induzierten Ströme nur noch auf der Randschicht des Schirmmaterials fließen. In diesem Fall wirkt nur die äußere Materialschicht dem anliegenden Feld entgegen, sodass die gleiche Schirmwirkung mit einer hohlen, leitfähigen Hülle erreicht werden kann, welche damit auch die einfachste Möglichkeit eines elektrodynamischen Schirmes darstellt. 
 \par 
 \vspace{\linespace}
 Die vorausgesetzte Leitfähigkeit des Schirms hat außerdem den Vorteil, auch als Faraday'scher Käfig zu wirken und in hohem Maße elektrische Gleich- und Wechselfelder zu schirmen. Die erreichte Güte bei der Schirmung elektrischer Felder ist dabei bei gleichem Aufwand um Größenordnungen höher als die spezieller dielektrischer Schirme~\cite{EM_Schirmung}.
@@ -112,7 +112,7 @@ Für die beschriebene Wirkungsweise der Schirmung ist weiterhin unerheblich, ob 
 
 \subsubsection{Eindringtiefe}\label{cha:2_subsub_Eindringtiefe}
 
-Wie bereits beschrieben sind für die Eindringtiefe $\delta$, oder auch äquivalente Leitschichtdicke genannt, der Felder in des Schirmmaterial nicht nur die Materialparameter wie die elektrische Leitfähigkeit $\sigma$ und Permeabilität $\mu$ entscheidend, sondern auch die Frequenz des äußeren Feldes. Der Wert der Eindringtiefe ist für die vorliegende Situation nach~\cite{Taschenbuch_HF-Technik} definiert als
+Wie bereits beschrieben sind für die Eindringtiefe $\delta$, oder auch äquivalente Leitschichtdicke genannt, der Felder in das Schirmmaterial nicht nur die Materialparameter wie die elektrische Leitfähigkeit $\sigma$ und Permeabilität $\mu$ entscheidend, sondern auch die Frequenz des äußeren Feldes. Der Wert der Eindringtiefe ist für die vorliegende Situation nach~\cite{Taschenbuch_HF-Technik} definiert als
 
 \begin{equation}
     \delta = \sqrt{\frac{1}{\pi f \mu \sigma}}
@@ -131,7 +131,7 @@ Für die Bestimmung der Effektivität eines Schirmes gegen eindringende Strahlun
     \label{eq:2_Schirmungseffektivitaet}
 \end{equation}
 
-als Summe aus dem Reflektionsverlust \acs{R_w}, der Absorptionsdämpfung \acs{A_w} und dem Korrekturfaktor \acs{B_w} für Reflektionen innerhalb des Schirms bzw. beim Übergang an inneren Grenzflächen. Für $A_w > 15 \si{\Dezibel}$ kann \acs{B_w} jedoch vernachlässigt werden~\cite{NASA_SP-3067}. In dem Fall, dass die Feldquelle mehr als eine Wellenlänge $\lambda$ oder in einem Abstand von mindestens $D^2 / \lambda$, mit der größten Ausdehnung der Feldquelle $D$, vom Schirm entfernt positioniert ist, ist für die Bestimmung von \acs{R_w} nach~\cite{NASA_SP-3067} die Beziehung für ebene Wellen in jedem Fall ausreichend.  
+als Summe aus dem Reflektionsverlust \acs{R_w}, der Absorptionsdämpfung \acs{A_w} und dem Korrekturfaktor \acs{B_w} für Reflektionen innerhalb des Schirms bzw. beim Übergang an inneren Grenzflächen. Für $A_w > 15 \, \si{\Dezibel}$ kann \acs{B_w} jedoch vernachlässigt werden~\cite{NASA_SP-3067}. In dem Fall, dass die Feldquelle mehr als eine Wellenlänge $\lambda$ oder in einem Abstand von mindestens $D^2 / \lambda$, mit der größten Ausdehnung der Feldquelle $D$, vom Schirm entfernt positioniert ist, ist für die Bestimmung von \acs{R_w} nach~\cite{NASA_SP-3067} die Beziehung für ebene Wellen in jedem Fall ausreichend.  
 \par
 \vspace{\linespace}
 Zur einfacheren Abschätzung der Summanden \acs{R_w} und \acs{A_w} kann auf Nomogramme zurückgegriffen werden. Damit kann für eine gegebene Frequenz der zu schirmenden Welle und ein ausgewähltes Material direkt der entsprechende Verlust beim Materialdurchgang abgelesen werden. Im \Anhang\ref{Anhang:Nomogramm_Reflektionsdaempfung},~\ref{Anhang:Nomogramm_Absorptionsverlust} sind die Schaubilder nach~\cite{Simplified_shielding} dargestellt. 
@@ -164,7 +164,7 @@ Wie leicht zu erkennen ist, nehmen die Absorptionsverluste im Material bei den b
 %Die höheren Reflektionsdämpfungen des Aluminiums sind auf die höhere Leitfähigkeit $\sigma$ im Vergleich zu Stahl zurückzuführen. Auch wenn diese für die Einfügungsdämpfung keinen nennenswerten Beitrag leisten, werden sie bei der Betrachtung von Hohlraumresonanzen innerhalb eines Schirmes relevant. 
 \par
 \vspace{\linespace}
-Die theoretisch erreichbare Schirmdämpfung von mehr als \SI{1000}{\Dezibel} reduziert sich in der Praxis natürlich durch jegliche Öffnungen des Systems, durch die Störungen einkoppeln bzw. nach dem Reziprozitätsgesetz auskoppelt können. Für verschraubte Metallgehäuse kann bei sorgfältiger Platzierung der Verschraubungen eine Dämpfung von >\SI{100}{\Dezibel} erreicht werden~\cite{Design_of_shielded_enclosures}. Mit steigender Frequenz nimmt die praktisch erreichbare Schirmung ebenfalls ab, da die elektromagnetischen Wellen aufgrund der kürzeren Wellenlänge leichter über Spalte in das System gelangen können. Zu beachten ist auch, dass Schirmungseffektivitäten $S_w \geq 150 \si{\Dezibel}$ (vgl.~\Tabelle\ref{tab:2_Beispielwerte_Schirmdaempfungen} und \Anhang\ref{Anhang:Nomogramm_Reflektionsdaempfung},~\ref{Anhang:Nomogramm_Absorptionsverlust}) messtechnisch kaum oder nur mit großem Aufwand nachweisbar sind~\cite{EM_Schirmung}.
+Die theoretisch erreichbare Schirmdämpfung von mehr als \SI{1000}{\Dezibel} reduziert sich in der Praxis natürlich durch jegliche Öffnungen des Systems, durch die Störungen einkoppeln bzw. nach dem Reziprozitätsgesetz auskoppeln können. Für verschraubte Metallgehäuse kann bei sorgfältiger Platzierung der Verschraubungen eine Dämpfung von >\SI{100}{\Dezibel} erreicht werden~\cite{Design_of_shielded_enclosures}. Mit steigender Frequenz nimmt die praktisch erreichbare Schirmung ebenfalls ab, da die elektromagnetischen Wellen aufgrund der kürzeren Wellenlänge leichter über Spalte in das System gelangen können. Zu beachten ist auch, dass Schirmungseffektivitäten $S_w \geq 150 \si{\Dezibel}$ (vgl.~\Tabelle\ref{tab:2_Beispielwerte_Schirmdaempfungen} und \Anhang\ref{Anhang:Nomogramm_Reflektionsdaempfung},~\ref{Anhang:Nomogramm_Absorptionsverlust}) messtechnisch kaum oder nur mit großem Aufwand nachweisbar sind~\cite{EM_Schirmung}.
 \par
 \vspace{\linespace}
 Zur Vermeidung von nichtlinearen Sättigungserscheinungen des Schirms werden in der Praxis des Weiteren häufig mehrschichtige Schirme eingesetzt, wobei die der Störung zugewandte Seite möglichst aus einem linearen Schirmmaterial mit niedriger Permeabilität bestehen sollte~\cite{EMV}. 
@@ -183,7 +183,7 @@ Das Phänomen der Reflektion ebener Wellen an idealleitenden Flächen (vgl. \Abs
     \label{fig:2_Hohlwellenleiter}
 \end{figure}
 
-Wird für eine ebene Welle, wie in \Abb\ref{fig:2_Hohlwellenleiter} dargestellt, ein E-Feldvektor parallel der Seitenwände mit einem zugehörigen H-Feldvektor angenommen, ist der Winkel $\vartheta$, unter dem die Ausbreitung der Welle stattfindet, nur von der längsten Seite des Hohlwellenleiters $a$ und der Freiraumwellenlänge $\lambda_0$ abhängig~\cite{Taschenbuch_HF-Technik}. Die Ausbreitungsbedingung ergibt sich aus dem Gangunterschied der reflektierten Wellenanteile, die sich möglichst konstruktiv überlagern sollten, d.h. einen Gangunterschied von $\lambda_0 / 2$ aufweisen sollten. Für das dargestellt Beispiel ergibt sich: 
+Wird für eine ebene Welle, wie in \Abb\ref{fig:2_Hohlwellenleiter} dargestellt, ein E-Feldvektor parallel der Seitenwände mit einem zugehörigen H-Feldvektor angenommen, ist der Winkel $\vartheta$, unter dem die Ausbreitung der Welle stattfindet, nur von der längsten Seite des Hohlwellenleiters $a$ und der Freiraumwellenlänge $\lambda_0$ abhängig~\cite{Taschenbuch_HF-Technik}. Die Ausbreitungsbedingung ergibt sich aus dem Gangunterschied der reflektierten Wellenanteile, die sich möglichst konstruktiv überlagern sollen, d.h. im besten Fall einen Gangunterschied von $\lambda_0 / 2$ aufweisen. Für das dargestellte Beispiel ergibt sich: 
 
 \begin{equation}
     \sin{\vartheta} = \frac{n \cdot \lambda_0}{2 a} \; ; \qquad n \in \mathbb{N} \, \text{.}
@@ -195,13 +195,13 @@ Mit $n=1$ wird dabei die Grundwelle und mit $n>1$ sogenannte höheren Wellen\-ty
 Die in  \Abb\ref{fig:2_Hohlwellenleiter} dargestellten gestrichelten Linien stellen die Ebenen konstanter Phase dar und deren Abstand ist die Hohlleiterwellenlänge $\lambda_H$ für die gilt~\cite{Taschenbuch_HF-Technik}:
 
 \begin{equation}
-    \lambda_H = \frac{\lambda_0}{\cos{\vartheta}}
+    \lambda_H = \frac{\lambda_0}{\cos{\vartheta}} \; \text{.}
 \end{equation}
 
 Mit sinkender Frequenz steigt also der Winkel $\vartheta$ und ebenfalls $\lambda_H$, bis für $\vartheta = 90\si{\degree}$ die Hohlleiterwellenlänge gegen unendlich geht. Das bedeutet es gibt eine untere, kritische Frequenz $f_k$, für die keine Wellenausbreitung im Hohlwellenleiter stattfinden kann. Dies kann für Öffnungen und Durchführungen in Schirme genutzt werden.
 \par
 \vspace{\linespace}
-Zur Bestimmung der Grenzfrequenzen in verschiedenen Leiterquerschnitten müssen verschiedene Wellentypen unterschieden werden. H-Wellen (TE-Wellen, transversal-elektrisch) haben nur eine axiale magnetische Komponente $H_z$ und E-Wellen (TM-Wellen, transversal-magnetisch) nur eine Längskomponente des elektrischen Feldes $E_z$, während die jeweils anderen axialen Komponenten Null sind~\cite{Taschenbuch_HF-Technik}. Die Kennzeichnung der Wellentypen geschieht über Indizes, welche die Maxima in den unterschiedlichen Koordinatenrichtungen beschreiben. Die Grundwelle ist dann jeweils der Wellentyp, der innerhalb eines Querschnittes noch ausbreitungsfähig ist~\cite{Taschenbuch_HF-Technik}. In \Tabelle\ref{tab:2_Grenzwellenlaengen_Hohlleiter} sind die kritischen Wellenlängen für verschiedene Querschnitte mit den jeweiligen Grundwellentypen nach~\cite{Taschenbuch_HF-Technik} zusammengefasst.
+Zur Bestimmung der Grenzfrequenzen in Leiterquerschnitten müssen verschiedene Wellentypen unterschieden werden. H-Wellen (TE-Wellen, transversal-elektrisch) haben nur eine axiale magnetische Komponente $H_z$ und E-Wellen (TM-Wellen, transversal-magnetisch) nur eine Längskomponente des elektrischen Feldes $E_z$, während die jeweils anderen axialen Komponenten Null sind~\cite{Taschenbuch_HF-Technik}. Die Kennzeichnung der Wellentypen geschieht über Indizes, welche die Maxima in den unterschiedlichen Koordinatenrichtungen beschreiben. Die Grundwelle ist dann jeweils der Wellentyp, der innerhalb eines Querschnittes noch ausbreitungsfähig ist~\cite{Taschenbuch_HF-Technik}. In \Tabelle\ref{tab:2_Grenzwellenlaengen_Hohlleiter} sind die kritischen Wellenlängen für verschiedene Querschnitte mit den jeweiligen Grundwellentypen nach~\cite{Taschenbuch_HF-Technik} zusammengefasst.
 
 
 \begin{table}[ht]
@@ -232,8 +232,8 @@ Zur Bestimmung der Grenzfrequenzen in verschiedenen Leiterquerschnitten müssen 
 Wellen mit $f < f_k$ erfahren innerhalb eines Hohlleiters mit der Länge $L$ eine Dämpfung~\cite{EM_Schirmung}:
 
 \begin{align}
-    S_{WL} \left[\si{\Dezibel}\right] &= 20\log_{10}\left(e^{\alpha\cdot L}\right)  \\
-    \alpha &= \frac{2\pi}{\lambda_k} \sqrt{1-\left(\frac{\lambda_k}{\lambda_0}\right)^2} = \frac{2\pi f_k}{c_0} \sqrt{1-\left(\frac{f}{f_k}\right)^2} \qquad \text{für} \quad f < 0,8 f_k
+    S_{WL} \left(\si{\Dezibel}\right) &= 20\log_{10}\left(e^{\alpha\cdot L}\right)  \\
+    \alpha &= \frac{2\pi}{\lambda_k} \sqrt{1-\left(\frac{\lambda_k}{\lambda_0}\right)^2} = \frac{2\pi f_k}{c_0} \sqrt{1-\left(\frac{f}{f_k}\right)^2} \qquad \text{für} \quad f < 0,8 f_k   \; \text{.}
 \end{align}
 
 
@@ -241,7 +241,7 @@ Wellen mit $f < f_k$ erfahren innerhalb eines Hohlleiters mit der Länge $L$ ein
 
 \subsubsection{Hohlraumresonanzen}\label{cha:2_subsub_Hohlraumresonanzen}
 
-Die Betrachtung des vorangegangenen \Abschnitts\nameref{cha:2_subsub_Hohlwellenleiter} kann im Weiteren auf ein geschlossenes, leitfähiges Gehäuse ausgeweitet werden, das im Wesentlichen einen Hohlwellenleiter mit kurzgeschlossenen Enden darstellt. Entsprechend der Grenzbedingungen für das elektrische und magnetische Feld (vgl.~\Abschnitte\ref{cha:2_sub_Verhalten_an_Grenzflächen},~\ref{cha:2_sub_Reflektion}) wird eine eingekoppelte Hohlleiterwelle im Idealfall an den Gehäuseenden vollständig reflektiert. Die Überlagerung der hin- und rücklaufenden Welle führt bei ausgezeichneten Anregungsfrequenzen zum Resonanzfall, wodurch ein sogenannter Hohlraumresonator entsteht. Anschaulich ist klar, dass zum Auftreten einer Resonanz eine stehende Welle mit einem ganzzahligen Vielfachen ihrer Wellenlänge in den Bereich der Schirmabmessung kommen muss.
+Die Betrachtung des vorangegangenen Abschnitts kann im Weiteren auf ein geschlossenes, leitfähiges Gehäuse ausgeweitet werden, das im Wesentlichen einen Hohlwellenleiter mit kurzgeschlossenen Enden darstellt. Entsprechend der Grenzbedingungen für das elektrische und magnetische Feld (vgl.~\Abschnitte\ref{cha:2_sub_Verhalten_an_Grenzflächen},~\ref{cha:2_sub_Reflektion}) wird eine eingekoppelte Hohlleiterwelle im Idealfall an den Gehäuseenden vollständig reflektiert. Die Überlagerung der hin- und rücklaufenden Welle führt bei ausgezeichneten Anregungsfrequenzen zum Resonanzfall, wodurch ein sogenannter Hohlraumresonator entsteht. Anschaulich ist klar, dass zum Auftreten einer Resonanz eine stehende Welle mit einem ganzzahligen Vielfachen ihrer Wellenlänge in den Bereich der Schirmabmessung kommen muss.
 \par
 \vspace{\linespace}
 Aufgrund der dabei entstehenden hohen Verstärkung der Hohlraumwelle kann im Bereich dieser Frequenzen eine deutliche Reduktion der Schirmwirkung des Gehäuses beobachtet werden~\cite{EM_Schirmung}. Ein gängiger Weg zur Reduktion dieses Phänomens ist der Einsatz von Absorbermaterialien innerhalb des Schirmgehäuses~\cite{EM_Schirmung}. Für die Auswahl der richtigen Absorber kann dabei die Kenntnis der Resonanzfrequenzen entscheidend sein. Diese lassen sich für ein quaderförmiges Gehäuse mit den Seitenlängen $a, b, c$ relativ einfach bestimmen~\cite{Klassische_Elektrodynamik}

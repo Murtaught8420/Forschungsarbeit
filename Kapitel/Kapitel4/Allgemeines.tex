@@ -1,6 +1,6 @@
 
 
-Im \Abschnitt\ref{cha:2_sub_Begriff_der_Schirmdaempfung} wurde bereits auf den Begriff der Schirmdämpfung als Pegelmaß der Feldgrößenbeträge (vgl. \Gleichungen\eqref{eq:2_Schirmdaempfung_elektrisch} bis \eqref{eq:2_Schirmdaempfung_Leistung}) eingegangen. Bei der Bestimmung der Schirmdämpfung mit einem VNA eignet sich jedoch die Betrachtung der Messstrecke mithilfe der Zweitortheorie. Dabei stellt die Messstrecke einen passiven Zweipol dar, der sich analog zu einem passiven elektrischen Bauelement verhält und durch Wellengrößen eindeutig beschrieben werden kann. In der \Abb\ref{fig:4_Zweitor} ist dies schematisch dargestellt, wobei die jeweils zulaufenden Wellen durch die Größen $\underline{a}_1$ und $\underline{a}_2$ und die ablaufenden mit $\underline{b}_1$ und $\underline{b}_2$ gekennzeichnet sind~\cite{Taschenbuch_HF-Technik}. 
+Im \Abschnitt\ref{cha:2_sub_Begriff_der_Schirmdaempfung} wurde bereits auf den Begriff der Schirmdämpfung als Pegelmaß der Feldgrößen\-beträge (vgl. \Gleichungen\eqref{eq:2_Schirmdaempfung_elektrisch} bis \eqref{eq:2_Schirmdaempfung_Leistung}) eingegangen. Bei der Bestimmung der Schirmdämpfung mit einem VNA eignet sich jedoch die Betrachtung der Messstrecke mithilfe der Zweitortheorie. Dabei stellt die Messstrecke einen passiven Zweipol dar, der sich analog zu einem passiven elektrischen Bauelement verhält und durch Wellengrößen eindeutig beschrieben werden kann. In der \Abb\ref{fig:4_Zweitor} ist dies schematisch dargestellt, wobei die jeweils zulaufenden Wellen durch die Größen $\underline{a}_1$ und $\underline{a}_2$ und die ablaufenden mit $\underline{b}_1$ und $\underline{b}_2$ gekennzeichnet sind~\cite{Taschenbuch_HF-Technik}. 
 \par
 \vspace{\linespace}
 
@@ -13,7 +13,7 @@ Im \Abschnitt\ref{cha:2_sub_Begriff_der_Schirmdaempfung} wurde bereits auf den B
 \end{figure}
 
 
-In der Praxis hat die Darstellung mithilfe der Wellengrößen den Vorteil, dass diese auch bei hohen Frequenzen direkt gemessen werden können~\cite{Taschenbuch_HF-Technik}. Neben der äquivalenten Beschreibung des Verhaltens des Zweitors durch Beziehungen zwischen den Torspannungen und -strömen kann das Übertragungsverhalten auch mithilfe der Streumatrix $\underline{S}$ 
+In der Praxis hat die Darstellung mithilfe der Wellengrößen den Vorteil, dass diese auch bei hohen \mbox{Frequenzen} direkt gemessen werden können~\cite{Taschenbuch_HF-Technik}. Neben der äquivalenten Beschreibung des Verhaltens des Zweitors durch Beziehungen zwischen den Torspannungen und -strömen kann das Übertragungsverhalten auch mithilfe der Streumatrix $\underline{S}$ 
 
 
 \begin{equation}
@@ -21,7 +21,7 @@ In der Praxis hat die Darstellung mithilfe der Wellengrößen den Vorteil, dass 
     \left(\begin{array}{c}\underline{b}_1 \\ \underline{b}_2 \end{array}\right) = \left(\begin{array}{cc}\underline{S}_{11} & \underline{S}_{12} \\ \underline{S}_{21} & \underline{S}_{22} \end{array}\right) \left(\begin{array}{c}\underline{a}_{1} \\ \underline{a}_{2} \end{array}\right) \label{cha:4_Streuparameter}
 \end{equation}
 
-charakterisiert werden~\cite{Taschenbuch_HF-Technik}. Die Streumatrix $\underline{S}$ ist für struktursymmetrische Zweitore ebenfalls symmetrisch~\cite{Grundkurs_Hochfrequenztechnik}.  
+charakterisiert werden~\cite{Taschenbuch_HF-Technik}. $\underline{S}$ ist für struktursymmetrische Zweitore ebenfalls symmetrisch~\cite{Grundkurs_Hochfrequenztechnik}.  
 \par
 \vspace{\linespace}
 Die Bestimmung der Streuparameter oder S-Parameter $\underline{S}_{11}$ bis $\underline{S}_{22}$ kann nun durch die Beschaltung jeweils eines Tores mit der Systemimpedanz durch den VNA erfolgen. Dies führt im Idealfall zum reflexionsfreien Abschluss des Tores, wodurch die jeweils zulaufende Wellengröße $\underline{a}_1$ bzw. $\underline{a}_2$ verschwindet~\cite{Grundkurs_Hochfrequenztechnik}. Die Berechnung der Streuparameter mithilfe der \Gleichung\eqref{cha:4_Streuparameter} wird damit trivial. 
@@ -38,14 +38,14 @@ Für die Deutung der S-Parameter ist die Reihenfolge der Indizes relevant. $\und
     \label{fig:4_Signalflussdiagramm_Zweitor}
 \end{figure}
 
-Um mit der ermittelten und im Allgemeinen komplexen Streumatrix als Übertragungsmaß zu arbeiten, bietet sich die logarithmische Darstellung an, weshalb die Angabe der S-Parameter oft in Dezibel erfolgt~\cite{Grundkurs_Hochfrequenztechnik}. 
+Um mit der ermittelten und im Allgemeinen komplexen Streumatrix als Übertragungsmaß zu arbeiten, bietet sich die logarithmische Darstellung an, weshalb die Angabe der S-Parameter oft in Dezibel erfolgt~\cite{Grundkurs_Hochfrequenztechnik} 
 
 \begin{equation}
-    S_{12, dB} = 20 \cdot \lg \left( \left| \underline{S}_{12} \right| \right) \label{eq:4_Schirmdaempfung_Dezibel}
+    S_{12, dB} = 20 \cdot \lg \left( \left| \underline{S}_{12} \right| \right) \; \text{.} \label{eq:4_Schirmdaempfung_Dezibel}
 \end{equation}
 
 
-Mithilfe der Transmissionskoeffizienten kann die Schirmdämpfung eines Materials durch Einfügungsmessung ermittelt werden (vgl. \Abschnitte\ref{cha:2_sub_Begriff_der_Schirmdaempfung} und \ref{cha:2_Methoden_der_Schirmdaempfungsmessung}). In der \Abb\ref{fig:4_Einfuegungsmessung} ist die Vorgehensweise schematisch dargestellt. Beim Arbeiten mit den S-Parametern in Dezibel kann die Schirmdämpfung durch Subtraktion der ermittelten Freiraumdämpfung ohne Schirm~\mbox{(\subref{subfig:4_Einfuegungsmessung_Fall1})} von den Messwerten mit Schirm~\mbox{(\subref{subfig:4_Einfuegungsmessung_Fall2})} bestimmt werden. Dies wird für alle Frequenzen des Messbereichs durchgeführt.
+Mithilfe der Transmissionskoeffizienten kann die Schirmdämpfung eines Materials durch Einfügungs\-messung ermittelt werden (vgl. \Abschnitte\ref{cha:2_sub_Begriff_der_Schirmdaempfung} und \ref{cha:2_Methoden_der_Schirmdaempfungsmessung}). In der \Abb\ref{fig:4_Einfuegungsmessung} ist die Vorgehensweise schematisch dargestellt. Beim Arbeiten mit den S-Parametern in Dezibel kann die Schirmdämpfung durch Subtraktion der ermittelten Freiraumdämpfung ohne Schirm~\mbox{(\subref{subfig:4_Einfuegungsmessung_Fall1})} von den Messwerten mit Schirm~\mbox{(\subref{subfig:4_Einfuegungsmessung_Fall2})} bestimmt werden. Dies wird für alle Frequenzen des Messbereichs durchgeführt.
 \par
 
 
@@ -69,10 +69,12 @@ Mithilfe der Transmissionskoeffizienten kann die Schirmdämpfung eines Materials
 Da es sich bei den verwendeten Schirmen um rein passive Elemente handelt und im Idealfall das Reziprozitätsgesetz gilt (vgl. \Abschnitt\ref{cha:2_sub_Begriff_der_Schirmdaempfung}), sollten die Transmissionskoeffizienten der Streumatrix gleich sein. Da es trotz sorgfältiger Abdeckung der meisten reflektiven Flächen innerhalb der Testkammer Reflektionen und damit zusätzlichen Wellenfronten gibt, gilt 
 
 \begin{equation}
-    S_{12} \approx S_{21}\label{eq:4_Naeherung_Transmissionskoeffizienten}
+    |S_{12}| \approx |S_{21}|\label{eq:4_Naeherung_Transmissionskoeffizienten}
 \end{equation}
 
 nur noch in Näherung~\cite{EM_Schirmung}. Im \Abschnitt\ref{cha:4_Versuchsvorbereitung_und_Durchfuehrung} wird darauf anhand der Messwerte noch einmal eingegangen.
+\par
+\vspace{\linespace}
 
 
 
@@ -82,7 +84,7 @@ nur noch in Näherung~\cite{EM_Schirmung}. Im \Abschnitt\ref{cha:4_Versuchsvorbe
 %Einfügungsmessung erklären mit Freiraumdämpfung, etc.
 
 
-Für die durchgeführten Messungen wird ein 2-Port VNA der Firma Anritsu mit der Modellbezeichnung MS46122A/B-020 genutzt. Damit ist die Bestimmung aller Streuparameter möglich. Der VNA gibt dabei das Testsignal aus und übernimmt gleichzeitig die Analyse und Bestimmung der Amplitude und Phase des empfangenen Signals. Auch wenn zur reinen Bestimmung der Schirmdämpfung nach \Gleichung\eqref{eq:4_Schirmdaempfung_Dezibel} das komplexe Ausgangsignal wieder auf einen skalaren Wert reduziert wird, kann mithilfe der Information über die Phasenlage des Signals eine höhere Genauigkeit erzielt werden~\cite{VNA-Handbuch}. Außerdem ermöglicht es zusätzliche Messmethoden wie Zeitbereichsmessungen und die Darstellung von Smith-Diagrammen. Letzere werden vor allem für die Auswertung der Reflektionsparameter genutzt.
+Für die durchgeführten Messungen wird ein 2-Port VNA genutzt. Damit ist die Bestimmung aller Streuparameter möglich. Der VNA gibt dabei das Testsignal aus und übernimmt gleichzeitig die Analyse und Bestimmung der Amplitude und Phase des empfangenen Signals. Auch wenn zur reinen Bestimmung der Schirmdämpfung nach \Gleichung\eqref{eq:4_Schirmdaempfung_Dezibel} das komplexe Ausgangsignal wieder auf einen skalaren Wert reduziert wird, kann mithilfe der Information über die Phasenlage des Signals eine höhere Genauigkeit erzielt werden~\cite{VNA-Handbuch}. Außerdem ermöglicht es zusätzliche Messmethoden wie Zeitbereichsmessungen und die Darstellung von Smith-Diagrammen. Letztere werden vor allem für die Auswertung der Reflektionsparameter genutzt.
 
 %2-Port VNA --> Quelle und Analyzer gleichzeitig
 

@@ -250,7 +250,7 @@
 \input{Struktur/Worttrennungen}
 
 %Penalty für Worttrennungen
-\global\hyphenpenalty=500
+\global\hyphenpenalty=600
 
 %Toleranz für ungleichmäßige Lücken zwischen Wörtern beim Erreichen des Blocksatzes
 %\tolerance=400
@@ -263,7 +263,8 @@
 
 \setlength{\jot}{10pt}              %Abstand zwischen Gleichungen in align-Umgebung
 
-\include{Struktur/Titelseite}
+%\include{Struktur/Titelseite}
+\includepdf[pages=-, offset= 0cm 0cm, pagecommand={\thispagestyle{empty}}, draft=false]{Struktur/Deckblatt.pdf}
 
 \onehalfspacing
 
